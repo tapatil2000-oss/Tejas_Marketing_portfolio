@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tejas Ashwin Patil | Marketing Management</title>
+<meta name="description" content="Tejas Ashwin Patil — PGDM Marketing, Dr. D. Y. Patil B-School, Pune. Market research, SEO, digital marketing and growth campaigns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f1a; --bg2:#111729; --card:#151c31; --line:#232c47;
+  --text:#e9edf7; --muted:#97a1bd;
+  --a1:#7c5cff; --a2:#ff6b6b; --a3:#22d3a6;
+  --grad:linear-gradient(120deg,var(--a1),var(--a2));
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Space Grotesk",sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:96px 0;position:relative}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--a3);font-weight:600;margin-bottom:12px}
+.title{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:16px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:640px}
+
+/* progress + nav */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:100}
+nav{position:fixed;top:0;width:100%;z-index:50;transition:.3s}
+nav.scrolled{background:rgba(11,15,26,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"Space Grotesk";font-weight:700;font-size:1.25rem}
+.links{display:flex;gap:26px;font-size:.92rem;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:.95rem;transition:.25s;border:1px solid transparent;cursor:pointer}
+.btn-p{background:var(--grad);color:#fff;box-shadow:0 10px 30px -10px rgba(124,92,255,.7)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 16px 40px -10px rgba(255,107,107,.7)}
+.btn-g{border-color:var(--line);color:var(--text)}
+.btn-g:hover{border-color:var(--a1);background:rgba(124,92,255,.08)}
+
+/* hero */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.45;animation:float 14s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--a1);top:-80px;left:-120px}
+.b2{width:360px;height:360px;background:var(--a2);bottom:-60px;right:-80px;animation-delay:-5s}
+.b3{width:240px;height:240px;background:var(--a3);top:40%;left:45%;opacity:.2;animation-delay:-9s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.1)}}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative;z-index:2}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:.82rem;color:var(--muted);margin-bottom:22px;background:rgba(21,28,49,.6)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--a3);box-shadow:0 0 0 0 rgba(34,211,166,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,211,166,0)}100%{box-shadow:0 0 0 0 rgba(34,211,166,0)}}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:14px}
+.typed{font-family:"Space Grotesk";font-size:clamp(1.15rem,2.4vw,1.5rem);color:var(--muted);min-height:2em}
+.typed span{color:var(--text);border-right:2px solid var(--a2);padding-right:4px}
+.tagline{margin:18px 0 30px;color:var(--muted);max-width:560px;font-size:1.05rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.stat b{display:block;font-family:"Space Grotesk";font-size:2rem}
+.stat small{color:var(--muted);font-size:.82rem}
+
+/* dashboard card */
+.dash{background:rgba(21,28,49,.75);border:1px solid var(--line);border-radius:22px;padding:22px;backdrop-filter:blur(10px);box-shadow:0 30px 60px -20px rgba(0,0,0,.6);animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px)}}
+.dash-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:.85rem;color:var(--muted)}
+.chip{background:rgba(34,211,166,.12);color:var(--a3);padding:3px 10px;border-radius:999px;font-weight:600;font-size:.75rem}
+.bars{display:flex;align-items:flex-end;gap:10px;height:130px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.bars i{flex:1;border-radius:8px 8px 3px 3px;background:var(--grad);height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.funnel{margin-top:20px;display:grid;gap:8px}
+.funnel div{height:30px;border-radius:8px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-size:.78rem;background:rgba(124,92,255,.18);margin:0 auto;width:0;transition:width 1s ease;overflow:hidden;white-space:nowrap}
+
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;overflow:hidden;background:var(--bg2)}
+.track{display:flex;gap:48px;width:max-content;animation:scroll 32s linear infinite}
+.track span{font-family:"Space Grotesk";color:var(--muted);font-size:1.05rem;white-space:nowrap}
+.track span::before{content:"✦ ";color:var(--a2)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center}
+.photo{aspect-ratio:1;width:100%;max-width:290px;justify-self:center;border-radius:28px;background:var(--grad);padding:3px;position:relative}
+.photo-in{width:100%;height:100%;border-radius:26px;background:var(--card);display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk";font-size:5rem;font-weight:700;overflow:hidden}
+.photo-in{background:#eef0f4}
+.photo-in img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform .6s}
+.photo:hover .photo-in img{transform:scale(1.04)}
+.photo{box-shadow:0 30px 60px -25px rgba(124,92,255,.6);animation:bob 7s ease-in-out infinite}
+.photo::before{content:"";position:absolute;inset:-14px;border-radius:36px;border:1px dashed rgba(124,92,255,.45);animation:spin 40s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.photo .tag2{position:absolute;top:22px;left:-16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 16px;font-size:.85rem;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.photo .tag{position:absolute;bottom:-16px;right:-10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 16px;font-size:.85rem}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.pillar{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:.3s}
+.pillar:hover{border-color:var(--a1);transform:translateY(-6px)}
+.pillar .ic{font-size:1.6rem;margin-bottom:8px}
+.pillar h4{margin-bottom:6px}
+.pillar p{font-size:.88rem;color:var(--muted)}
+
+/* skills */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.panel h3{margin-bottom:20px;font-size:1.2rem}
+.sk{margin-bottom:18px}
+.sk-top{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:6px}
+.sk-top span:last-child{color:var(--muted)}
+.meter{height:8px;background:var(--bg);border-radius:99px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--grad);border-radius:99px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:.88rem;transition:.25s}
+.chips span:hover{background:var(--grad);border-color:transparent}
+
+/* projects */
+.projects{display:grid;gap:28px;margin-top:44px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px;display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;position:relative;overflow:hidden;transition:border-color .3s}
+.proj:hover{border-color:var(--a1)}
+.proj::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at var(--x,50%) var(--y,50%),rgba(124,92,255,.12),transparent 40%);pointer-events:none}
+.proj-no{font-family:"Space Grotesk";font-size:.85rem;color:var(--a2);margin-bottom:8px}
+.proj h3{font-size:1.5rem;margin-bottom:8px}
+.proj .ctx{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+.result{display:flex;gap:14px;flex-wrap:wrap}
+.result div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 16px;min-width:120px}
+.result b{display:block;font-family:"Space Grotesk";font-size:1.4rem}
+.result small{color:var(--muted);font-size:.75rem}
+.star{display:grid;gap:12px}
+.star div{border-left:2px solid var(--line);padding-left:16px;transition:.3s}
+.star div:hover{border-color:var(--a2)}
+.star h5{font-family:"Space Grotesk";font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--a3);margin-bottom:3px}
+.star p{font-size:.92rem;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.xp{list-style:none;display:grid;gap:12px;align-content:start}
+.xp li{position:relative;padding-left:22px;color:var(--muted);font-size:.95rem}
+.xp li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.xp b{color:var(--text)}
+.proj .result{margin-bottom:4px}
+.pubs{grid-column:1/-1;border-top:1px solid var(--line);padding-top:22px}
+.pubs h5{font-family:"Space Grotesk";font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--a3);margin-bottom:12px}
+.pub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pub-grid .art{position:relative;z-index:1}
+.pub-grid .art-body h4{font-size:.95rem}
+@media(max-width:1000px){.pub-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.pub-grid{grid-template-columns:1fr}}
+.tags span{font-size:.75rem;padding:4px 10px;border-radius:99px;background:rgba(124,92,255,.15);color:#c4b5fd}
+
+/* articles */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.flt{background:none;border:1px solid var(--line);color:var(--muted);padding:8px 16px;border-radius:999px;font:500 .88rem Inter,sans-serif;cursor:pointer;transition:.25s}
+.flt:hover{color:var(--text);border-color:var(--a1)}
+.flt.on{background:var(--grad);border-color:transparent;color:#fff}
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.art{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
+.art:hover{transform:translateY(-8px);border-color:var(--a1);box-shadow:0 24px 50px -20px rgba(124,92,255,.5)}
+.art.hide{display:none}
+.art-img{position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.art-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.art-img .cover{position:absolute;inset:0;width:100%;height:100%;transition:transform .6s}
+.art:hover .art-img img,.art:hover .cover{transform:scale(1.1)}
+.art-cat{position:absolute;z-index:2;top:12px;left:12px;background:rgba(11,15,26,.75);backdrop-filter:blur(6px);padding:4px 10px;border-radius:99px;font-size:.72rem;font-weight:600;letter-spacing:.04em}
+.art-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.art-body h4{font-size:1.02rem;line-height:1.35}
+.art-link{margin-top:auto;color:var(--a3);font-size:.84rem;font-weight:600}
+@media(max-width:1000px){.art-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.art-grid{grid-template-columns:1fr}}
+
+/* education */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl{position:relative;margin-bottom:26px}
+.tl::before{content:"";position:absolute;left:-26px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--a1)}
+.tl small{color:var(--a3);font-weight:600}
+.tl h4{margin:2px 0}
+.tl p{color:var(--muted);font-size:.9rem}
+.certs{display:grid;gap:10px}
+.cert{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 16px;transition:.25s}
+.cert:hover{transform:translateX(6px);border-color:var(--a2)}
+.cert span{font-size:.92rem}
+.cert small{color:var(--muted);font-size:.78rem;white-space:nowrap}
+
+/* contact */
+#contact{text-align:center}
+.contact-box{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:56px 24px;position:relative;overflow:hidden}
+.contact-box::after{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:var(--a1);filter:blur(120px);opacity:.18;top:-250px;left:50%;transform:translateX(-50%)}
+.contact-box>*{position:relative;z-index:1}
+.contact-box .lead{margin:0 auto 30px}
+.cinfo{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:28px}
+.cinfo a{padding:10px 18px;border:1px solid var(--line);border-radius:12px;font-size:.9rem;color:var(--muted);transition:.25s}
+.cinfo a:hover{color:var(--text);border-color:var(--a3)}
+footer{text-align:center;padding:34px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-grid,.about-grid,.skills-grid,.edu-grid,.proj{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .links{position:fixed;top:68px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:20px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.35s}
+  .links.open{transform:none}
+  .burger{display:block}
+  .photo{max-width:300px;margin:0 auto}
+  section{padding:72px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#hero" class="logo">Tejas Ashwin Patil<span class="grad">.</span></a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <div class="links" id="links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Experience</a>
+      <a href="#articles">Articles</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 1. HERO -->
+<section id="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge reveal"><span class="dot"></span> Open to marketing roles — remote, hybrid & on-site</div>
+      <h1 class="reveal d1">Tejas Ashwin Patil<br><span class="grad">Marketing Management</span></h1>
+      <div class="typed reveal d2">I do <span id="typed"></span></div>
+      <p class="tagline reveal d2">Turning market research and consumer insight into campaigns that get found, get clicked and get customers.</p>
+      <div class="cta reveal d3">
+        <a href="#work" class="btn btn-p">View Experience →</a>
+        <a href="#contact" class="btn btn-g">Contact Me</a>
+      </div>
+      <div class="stats reveal d3">
+        <div class="stat"><b><span class="count" data-to="2">0</span></b><small>Industry internships</small></div>
+        <div class="stat"><b><span class="count" data-to="15">0</span>+</b><small>Certifications</small></div>
+        <div class="stat"><b><span class="count" data-to="94">0</span>%</b><small>HubSpot DM score</small></div>
+      </div>
+    </div>
+
+    <div class="dash reveal d2" aria-hidden="true">
+      <div class="dash-h"><span>Campaign Performance</span><span class="chip">▲ Growth</span></div>
+      <div class="bars" id="bars">
+        <i data-h="35"></i><i data-h="48"></i><i data-h="42"></i><i data-h="60"></i><i data-h="72"></i><i data-h="68"></i><i data-h="90"></i>
+      </div>
+      <div class="funnel" id="funnel">
+        <div data-w="100"><span>Awareness</span><span>Reach</span></div>
+        <div data-w="80"><span>Interest</span><span>Clicks</span></div>
+        <div data-w="60"><span>Consideration</span><span>Leads</span></div>
+        <div data-w="40" style="background:rgba(255,107,107,.25)"><span>Conversion</span><span>Sales</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="track">
+  <span>Market Research</span><span>SEO</span><span>Google Analytics</span><span>Meta Ads Manager</span><span>Email Marketing</span><span>Content Strategy</span><span>Power BI</span><span>Lead Generation</span><span>Consumer Behavior</span><span>Canva</span><span>Copywriting</span><span>A/B Testing</span>
+  <span>Market Research</span><span>SEO</span><span>Google Analytics</span><span>Meta Ads Manager</span><span>Email Marketing</span><span>Content Strategy</span><span>Power BI</span><span>Lead Generation</span><span>Consumer Behavior</span><span>Canva</span><span>Copywriting</span><span>A/B Testing</span>
+</div></div>
+
+<!-- 2. ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="photo reveal">
+      <div class="photo-in"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAGQAZADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9PaKKKsAooooAKKKKgAooooAKKKKssKKKKACiiigAooooAKKKKACl6c+lOooAaD5rNKhzCByKSNWeFmW3EUfqTTiwQGdhsQ8BRyfyrI8Ta/4f8I6PLrPjLWktLBRuCucHPoB1JpCsau+JANtwZvwxinpHLLzFGR/vcV4bqH7WPhRrd77w34dkvoI8j7RKREAB0OCM15R4h/az8R+KLiSy8MzpOwyHhQBRGO53D0o5bhY+tNc8S+F/DQA8Qa5b2BPOwtkn9K5O/wDj98FtJGL7xnb24/vt/wDqr4S8VfEGKa5K3+rXWvuTkvyBGT1X8K8018aT4knIudOmkiXLbRJwAO2aOULH6E+If21P2ZPD1m91qPxHW6RQf3UVu75Ppwo/nXgPif8A4KvfD7Tb57bwt8KNQ1mwU4W4EqoG98Fa+Tn/ALMvbdhpVpFY2S5Vo5ow2ce5FcLq/iXwvoNwy3Gm22zBBdNvXscUcoWPt/Tf+CtngmWQRav8JL+yz0Pmhv8A2WuxtP8Agp38GL2JWvPCN4pOOOP/AImvzW02+bxHceRp1nbvIxO0uoH0rtPD3w7ulud/inWV0+EngJbBqrkHY/R7RP8Agov+zleyCPV7m40fdjDNFvA/ICvUPDn7TX7Pvi+NZ9G+KVgd+AFkbYefqtfmlB8PPhzLB5CeK1umbs9oFP6iuW8Z/B/wlptr9qimupA/GLdyp59hRyBZn7PWdzZ6nbLLoeoWN5Ged0NwHBH1XNSypKjL/oru/spx+dfiJ4Ktdd8E30aeCPjtrvg/UA26O1uBJOrn8a948Pft7ftVfCy9i07xjp9n4409cEXYVYndB6nGalxsI/UL5furcbbg9ExThHIuSbQef3bd2r5U+En/AAUj/Z6+Is8ej+KtT/4QjXZGCi3ujuVm7/OFxX1FpV7p2tWqapoGr2mowSKGW4gnEm4H/d4oAs0lP57qwJ7FSDRx2NMkZRRRQAUUUUFhRRRQAUUUUAFFFFABRRRUEBRRRVgFFFFABRRRUAFFFFABRRRVlhRRRQAUUUUAFFFFABS/5+lJ9KXHY0ALIJI1AuJ9rdrgDO72xTvLklUGKIBv72fvf4VWuLqCzWeV7pLa2tVMl3NMcIijk8njpXwz+0l/wUAltnu/DfwTiEWjWhMWo+Lm+7ERwwjQjJ+v8qQj6b+M3x50H4TWZtLK2TWfE0wxBp8cmRCT3Y49e3WvkvVfFPjP4g6mb/xxr7a1qkhLW2miPyYLQdQCcbTivkDUv2nri9uHt/AumX3ifWJWJe/lDfO564J6VBZ61+1148P9nso8O6bIfn3AByPZutEUUkj6U8fWi3EUMPi34mWGiW68T2VuUJK+nHtXCXXxA+F2gWc2m+CNUmmsVH+kT+WdzN35rjx8P/hH4Smt5vGupz+IfEeMyq14dme/etlNM0LVIpH8NadZWFjuHmReYrHrWyQ7HK6X8RdZ1bW54NGke20cZ87MG5pB7fWrWqeOtQk06azsdKl0PR0YeZc7C8szZ/u9RmvQLe30bw60d3AkVqABsmSMPuP0FaUuoaNFLHrd1YCe/JAT9xlGz6r0pWCx5ENO8W+N4hY6davp8LKBuKY3D+9+NLoP7K9zLfGa83ahK/ZpOAT7V7fMvii/tg+k6PbQq45ZnEfWrSeHfGWj6eNUOqxW7vwQkgfGfpRYLI8d1b9lHxhpVsohv0tpYjvVo5OQOo6GoIIfFPhnZD4j8fARQ/KFNtvxXpGr6hqvhyQXOoa/c3EMvLcM2M15T4y8eaTfaslhpMhuZHILiSPAI7jJouVY3tb+I/grStLinXxCNYvwcvHHb7cflRYftFeES0Xl+GFidBlnkbcMj2Nea6uunDUJbnSLWLSmmQAWzYYM3c57ZrC0628O3vneH/EWkf2ffTN8t4j7lP5UXFY9jvvjf4Q8SytNNZWvnAYV1jUEfjXnvia8n1i6Nxb3W+EjhRJnArktY+HMNpd/Y9H1FSp53BufyrKk8M6tpMpS31aZ2xkqQenem0ZlPxJo2hXTGC/KrITxJGRuB+tXvhx8YPjf8B79tQ+FvxSv7CM8+TIWljI9NpBH4AVg3lla3x80zPC4PO7170y1a/tvkjZLlB6jtWMgP0m/Za/4Kw6N4s1XTvAP7QWnjRdSuiIIPEaRhYXkJwA6BflBOOfev0SQxGEXFmY5YbgCRPLfck6nkMG6dOeK/nEuJdIvraW2v7ZAlwdomCDerdMj0xX2f+xP+3bffs/X1j8HvjPrsmr/AA8u22WGtSBmk0d2yVR+CWQn/vnqO9BJ+uCh9zTLINxGAPSkU4t2ScfOTVazvNO1Kwh1vTbuK4tZ0E0M0D743jblWDDjkYqy5O9ZiMqe3emA2iij37etBQUUUUDCiiigAooooAKKKKggKKKKsAooooAKKKKCwooooAKKKKACiiigAoooqACnDpTacvSrAQkoN8LAIp/0jPf0xUOp3tjpVlNqWrahFaWNsu+WeRgA64z3qc+VGpF0wSBEaRmPQqOpNflp+27+1rqnxb1jVPh98NL65tPDHhh/LubuBT/pEnAOMdQMdKiQRi2dn+2b+3X4G1zSm+HHh+9lh0wu329InxJeBSMKGAyBx+NfEFnq+r/HfVJLPTvDkuh+FbQLsAGBkDoezFq7b4MfA7RtTh/4Tf4mwyXYuMvp6OPnudvPzL1WvaNKv9B1u5i0zR9Ms7KKM7TAu1BBt6Z9c0RQ5QZgeCfDMOj6HENL8K2+iTxfKqGMMZMfxZ9+tTeJvEHi9rqKLU/Dj+Qo2+bCx5H0FdP4k0bXLuFm0jxMEkiHyw7OuO2a4Wx134iWs722qRi2iQ485l37l7nFdBMFYzbjwh8PNacpf+G7pZ25EnmMTk+9YJ+H2j+Gr1rmz+1+SclU81jXa6j4z0ixzOddVol+8TBjnvXOah8bPAA+RdUknmB5UW5IPtUWNnIzLXxh4j02Uw6fpzIM4BYeZx9KtWXxH8TLevHqWrzQcEACxLYPbtVZ/j54UgmWXSPAk0LdNzIWBPrW5D8Yb26t1vIoLa2U9ntl/rVcpLmXtJ8IeIviDphn1j4m3FjDESwQRNGSKi1r4ceOhpmfCvxUfy4eAZMnJHTrWJ4h8S+M9SU6hbatGtq4/wBVGgX9BXlOufET4kaLctbyWLvYn5gwkxnFFiHI67WNY/aF0jfourSxusmAb0IH8xfp2qhfeGte1c2sdpqML6oqktZsBGZD65rK0P8AaGG61N7cGCeQ7DaSDd5fvk1q+L7jTPECnXbPVc3ihXFzC+Ch67dorPmFzM4O7m8RaBrT2vibw696q5BjWXBH41Avijw5qd09lYarJpk/QW0sZbaf941cuvFtx4idoLqP+z9QjG0TsdwcDv8AjWFqFnp2sW76Zd2qWd+DxqCjlz6cetHMHMx02vX2k3PkTu815n5b9WO0enFaSfE+WzRYtbCs5wBeBf6Vwjrrfhf/AETWAbi3J+7149c0y8Nnew7i6tAQSIc8j8aOa5Fj0DWIo9Xt/t1iyy8bvkrlLl71Ij9jBjmXnBrnvDXiy/0C7WKBjLAWIIbsK7nVojqdl/asAEZ2F/lPBIGah6hY5ie7luLc3ZTyrwDAUjj8qqPqyavZ/wBmXyeZc5wP/rUmpX09/oEesMojl3mMhe+O9U5ojZ2sOr2uGlYfMeu2quM+s/2Nv+CgXjz9ly4b4eeOLO48T/D8P/x5swMum7myXjbacj1U8enav2C+DXxy+GP7QXhKHx58KvEEep2asUnRlKT2zDqjREZB7e9fzcSTyOimWXeFPySEZ3Z6gjvXp/7Pf7Rfjn9m34lWXxB8C3cltAHVNQ04vmG7hP31K9OnQ9QaVwP6Mi5VTdo25GIEi9xUgAMklrENsKgEH1rn/A/jHQviH4L0fx34WnSbTvElvHcIVORuIJYfUEEfhW85YyJFINqp94imAp6U2nHpTaYBRRRQWFFFFABRRRQAUUUUEBRRRQAUUUUFhRRRQAUUUUAFFFFABRRRUAFOXoPU9PrTaehAyx/5ZqZMeuKpgfPv7YfxC8Z+GvBA8BeBbcy614mRobnUt4X7DBxuYL3JFfH/AIO8I+A/C/h6z8NW1tHqPlOZjqzoN5mPLh16nn1rs/jJ4r8V/FD4s6lqmn6pJBZ6fIIYoh9222nBOf4s1UvtI0uxVo7KVV1O/C+dcdiR6J2rhdXU7IQsiz5emz6Zfy2ekQJfSJtkvHcIgUD+FDwPwrybUvC/gjTLF9SJuC+4tNJCxOX/AA969G1vwT4TsF0+X4lfEc5vCBDp1p8zv6BtvIryD9pH43eD/hBZL4W8H6ZGdSmQeVCSJCwI4LelbU5jnFdTK1D4nWmi/Nc+JE8uIZ+f5Tt7CsHWf2ufh5bWflJE+o3KfKdsWR+dcIlv4d1/wSvjL4leEbia8lYtHbRMV3+nArl30HxPMyXHhH4LrpdhJyk8z72YeuDzXUnc5Knum3r37SHhPXgIIvCkphzlgI+v5V1fhL4t/AW609bXVLIaZPxlnt84/HFYvhzwH4g1CxafULXT7GX+64Ra5vxb4J1LTUNxe6NbXkYOc25VuPwrRIxUrn0Ro/jP4US6dLBowsNVifB3uFRh9Kz9W8bfDh5rezn8IjEefuthfzr550+b4O3otbS5F1pGoMcB9xChvetvV5PE2nRtDpIh8Q2kagoA4U4+tJzsUlc9E8Q6r4cuYTPoGoGwlB4gPINcFrt1vg87WLQE5GJFbdn8K4PVPHTyNi/tpNJc/KI9ueR70yHWbqzjF/dXIW2b7r7t+fwrF1ClAi8a6VoN5J5+nxhLvHUcVyejanrPhO8+1x3Db+AyscqV78Vvahfx3vzwjbMOeazPs9hrGbOa42XSc88AnsKz5h8h0N9rel6mkd/axFbVyNqfxK/f9aHuWs5kaZxOXHyOOQg964x3v9IdZbiMCNjtaPso9a001aCyCzwt52ny8SMeWQn2o5g5TV1DWEtx5GogXMDdW64zWLdaLYTxm80ebKHkpu5FSX6Np8H2qDFzp7856nmsgl7RDqmnSEQsdpjz0z7UKRNimLeW5uxZxsB5h610/h7VLwNJoTP+7to3OSfauVDsk3nI2Gj+YH60+3uLhLsSROQ9wwU/Q1SdwsberoLfwfps4638khI9MGmeGd19Z3+jZ5lQMM+3pR4wvY1+x6HHgLpy9uhLYJrN0q+k0zU/tK9ChU49xRckokYJX+6SKM8EHuCKGOWY+rE0e47UXA/RT/gnF+37/wAKzi0T9nT4k23neH7+7aLS9ZMoT+yy+75GUr8yk9OeM+9fruVCyhLPE6yIJJFJ++p6EH8K/l6jnl+aXztsySLMAowSVzyCOmK/oS/Yx+NA+Pv7OPhTxvcXMR1ixg+x6lHG2WR4tyAN9QAffBNWB7lRR70tMBKKKKCwooooAKKKKACiiiggKKKKACiiigAooooAKKKKACiiigApy9KbTh0qUAOu1WmzzJWJ438QWfhbwhqfiC+kCKITGMnH3hitrOQEI4Q14H+2Lql3L4OsPC9jN5f9ok+Y2cbVHUn0qZlo+T9Z8YyGe60Twh4f821WR5ry6U5IZjlcn61yPhe48V6vqVxcazEltfQhhDdtIPLVPX0ziuq0K/tNIjPh7Q4UXTWXGq6sDvaduy47V598SNf0WyjbSrqU2GmZ3C3il3SXRHQZHK5rCNI63U0MTx34/wDh/wDCfRtQ8QeFr+XxP4pmV0e9uc+XZsf7gbg49q8p+CHwb1f4laovxN8W3P8AatzNKZhNM/AHX7p6Y5rgPiV4hvfHPie2sL2JNG0i0ceXpseCY1H8TMPvZ616ZD8T7fw/4an0nwdaPuhRYnlV8CQEYOB7V1RgYync77x3rlpd6rB4P8A6Vb6jcWIxdzEjZbn19OKwj4xt/Cqyw+NfHlvd3MmPs7QqNsAH3hgVx/2Z9MsLKy0iWWxfWTm9u1JeSTPUEDkVm+LrP4SfDvFjrXh19Z1KUBrdI7nzPNY9c+lXexlJXPVLbUfgt8Q4/slvM9xuHN355i8xu4x2rlPFHgk+CCZ/DGstZwMCfskjef5o+p6V5Fq/jvwPpswgfwJJplyoDC1hn4jz0ORQPjTb3kS6TP5lrGOUvGy5j9sVPtego0rjfElppmrxm5lsFZgT+627CD6iuOiv9T8Pzedp19NImf8Aj0ZiNo+tdtd/ETwprEX2O4sGkuQMLfBdv47a5O70y51CZo3kM9uc7ZQMEVz1KsTphQmjUPinRtZh8vxLAskRGAwXBU/Wse98MpaA6l4fuy9oeQjNuH5UQeDNVjjMCxebbNzuI5FRS+HNesx5VpO4g7oaiNSJbpy7GRcahcCTbcQlZh/y0HSkR4L8iISbLgc+YDir11aakYTBdwgQD+PHNZD6bKrbYi4i6h8c1paPci0+xqXLNcW+yXkgY5rDcPCSkQ4PGO1alvHfA7JRmqc1neyzkRRsfoKLwXUXJN9CbS7uTYdJZv3b+p4qBg9tdtYhgU5+laeleGL66kEiBw+fSti68AX+0TkPvJHOKylXgWsPNI4toHGDH0zUlg6Q6gGuMYAP511mreDbmztlkjyeM8c1ys9m0FyonBUsQORjmtITjIyqU5oZEDfXm25f5cn5jTblY47j7PAcqO9S6tpt1pFyLaVhuYBgQcjBqrtYHaD8/rWtrnPK63CkpaKWw4aiBtqjYMMeHz6V92/8ElPjb4g8D/H+L4SG5D+HfG8UheJzkJPGjlGX0JIINfCqudzvMvD8GvWf2V/iDpPws/aI8C+N9bldtO0nUFEjqOgcMo/DL0xn9GPlrueFxg722/TPFNAkVvJHQUpuYb7yLy3IKSwRzIfVWyR+lOLM43r1FACHpTacelNoGFFFFABRRRVgFFFFBAUUUUAFFFFABRRRQAU4dKbTh0oAbRRRQAU4dKbTh0qUAsYAmjRexr4R/bh8d6mmpanpGnKxZAqkr1UdyK+8LYB5c47V+dX7V2swaZ8StXa9COgZThu/tUzKPnvw7f63pvhCRPDl5LvuD+/1OdSAmevyn0rgviT40+G3gO1gkt7+bxXr86N58rAhEJHOO3FO+J/xY1/U1l0XRNLEVpKAohjXbn34rwzWrfWbuSHQWljW4mbcUKhvl7jdVoswrq91PWrt9Z0q2KrNNsjiLZZyx5/KvTJtvgm0s9GubZH1K1CyRuWGJN3JB9cV2Xw8+G/hTQdBn8aa7aGOCyjP2CKRseY5+8eeteR+IbTW/FniJLy1tJNkjMdPLEgso65+lXcLHbeLPiOPDOjeZoEyrr+sKFinIDC0X+JVB4y3TPauC0aW08KWsmr3FnJdeIrn/UxSHzPsuere5bJ+lTTeF7nU4IFmc+dZN8sg5xzyPevob4L/AARXWbm31/U7QzQuBsLr0xWVV2RcY3Z4Lo/w31rxO51aOweITHczSDJJPWun074BNPIIpLYyO5z0719r2Hwqn1C6XS7KwWCFOpVeMV6f4c+DWkaeqzPbq8qdcivKq1WnoenRopo+IPC37MM0mDcWO3/gHavStE/ZitxhZLYgf7tfZNr4PgZg0dqqgdsVrweG4kG0QKCPauWbmd8lBI+KNa/ZumsVMllF09uK4rUfghcTOY7vCbc9sV+iD+GYpoikka81yer/AAm0u/kMkmVz1wKiPOSuRn5va58K7jT2K2li+ovnAKrwKztM/Z98Za3N580P2OI9EKV+jUXwl03TkzY2SBO5YZNWf+EEsIIg6RrK/cYxinKvNFxpQbPz0tv2Wtb+0AzKzLmvSPC37M9nEALu3GQO619hp4WtY5M7AT9Kk/sFBJ+7iH5Vi8RPubKhA+bLP9n/AMP2zfurYD/gNV9X+BlnKCsMYAI9K+mTojEEmED6VX/sJXY7krJzn3LjCDPjHXPglHp0JSOIkIc8jNePfEf4RtJbf2jFFho+PlGOa/RfWPCcF5atmEZfgcV4t8Q/AbWsTWPk5D8jAzWlOvOOoTw0JLY/OK/tb2O5OlapuWWL7hb9KzJI5I2KzHa6/dFfRPxd+H+lyW26DEepwZLHOMivn3UMvOVlJDxna1e7h6/tD53GYb2epWoowfSiuuW1zzY6MKVXdMNGcFGEg+opKPX6UFn9AX7Bfx4i/aC/Z60TXdQCprGgJ9gvUDZ/1YKqfoQP0r6KjAZ2CtgDla/L7/gidqOpufiTo0k6nTttvJFEz8iXJBwvpg1+oDBWQKvDRk7qBID1pKKKBhRRRQAUUUVYBRRRQQIB3p2DShfWlxmgBlFFFBYUUUUAFFFFABRRRQAU4dKbTh0oAdHI8c6EjK9CR71+an7bVla2nxmure5tpLgTp8gXONx6V+lKFkeJF5iY5ZvTFfF37fvhefTZNK8ceG7NZ7i8PlS7hwF6E5NQI/NjxNJqljb3GlWzCbWDIEedVz9hVjgAD+LP6VEvghPDM9pBrJ+0X0oEiwqdxQnnJPv6V1niO3/sDxPGuihbu7cDax58pn659cGuh0/wnF4eubW41ecXurSAyOGbcHB55PbFbwVypiXdnLqek6ZH4s3T28QKQ6VGMHcfunjrzXHeI/CmraRbzafbyDUPEMhAjWFeNOjboox97Ir6I8J+DLzxCbfULKGMSqrJb3zEEQA9Rt716R4X+CcfgsWmsXWlrczyuTAxO9rkseSfQCtJTURRR8v/AA7+FMthaxf25bMs5w53jqTzX038OtNuLMR2yBRFjAAHGKsfELQmsb2JGt0Rnw3yYwM9q2/h/plx9qRZj8mM8V51aomdVGJ6/wCGNIsoIMhACR1xzW6tpar0WqHh6NvL2kGt54Qi52158tT0IxM+OJBnC4qWONM5K1Oki44UULKM/c/SsUabkixWjj5FNNexZvuOPxpEfnlcUM47uapMLFKe0iIwBWVeWcQzgcVuNLF0xWdfSQjtisqjNqZzMkLE9KDbMVPFXpAAelIXXGMVynUU4rYAc0G2UEnAqeT5DVS5nZAeetKDsNogntoQCDjFcT4n0rT33MSpOO/NdZc3BjhIZsk1wmtXQEzFyTUVZI2pxZ4T8UPh54cvIpbm60lpmAJEqtjFfDHxM0XS9O12VbK8wAT+7K4xX6a6ikF5bMlzIArdY9uc14X8TPgD4L8WMbt7H7FIeTKp5JrfBYjklqZYzCe3jofBGxthZJNxHakDlhhFw/fNeo/Fb4M3fgGU3unzme0z+Iry8tuPnEYI619HCoqi0Pk69B4eVmNpR1ooHUVZgffX/BHfxXZaV+0FrWhTaVczz6zYEQ3CE+Xb7N5O4dOc45r9kyFd5bhRjy3ZSPXnFfjT/wAEevF99of7Q2reE4NDF3b61YN514I8m08sMR83bd0/A1+yqAiWRjxtkYBfXk0AN680UUVYBRRRQAUUUUFhRRRQQFFFFABRRRQWFFFFABRRRQAUUUUAFOHSm04dKAFY7E+Q5xXg/wC2p4dn134IXt3CPm0r5jjqCcD/AAr3cYAkHcYrivjFo76/8JfFOnEZ+0W5I/Db/hUCPxos7L7HexXN9J5tzGeMnNd3oekAQzz6puC6iRt3NkgDsPSsq88Ow2s2qzWzmaaCbao6nOa0dAuNWgv5Z/EyYs9PCmNR3J6V0UtRtn0B4B0CwstKS6ju9kjbVsrfd0PQkivQ7zXrzQb6x0qC8U6nGubiRzlUU9h6V4d4H1RdT1iK6+0FLtgTDFnCqorurV7HxJqNzey3bhI+LyXnII6AVy4mbib043NTXY01y9W208l1Y/OScnPevR/BPha202zRCD5mMkntXMeBtGjvn+22nManqfavWbK2g8seX94eleTKo2erGioq5c02EoOgq7JuPA6VLZ2Mh7GtGPR5JOx/KrhqZznymIlsVHFSRwTk/KnH0rpIND2rlqcUgtSQQKp0yI1LnOmxnH8FV5YJhkFa6KWePacYrOuJRuzxUOBspnPThoz81Z98RKtbN6FdTjFY0sJORiuOqzspGQxZahMkgPAq+1pIOtRNAfSuY6SlcSstZt1KWGM1qXNtI1ZF5bypmlLRGiRjapeCNDtOa4zUJWuHJIrpdSRkQl81y91Ku8gVyyldnZShoU3iDndgVia1Zi6Gwdq3lBAxmsrUGMZJz1oa5HdFxkkrHiHxp8GR6r4YuZVOSiHivhS9spbKee0cYKsRX6P+N4hPo91COhQ18D/EHTzBrVysUZHzntXv5fVclY+YzWCnK5yCfKKEypJ9ATQ3ynFKchcKpYt8oA9SK9c8A/V//gi54M1Ow8LfEL4g6jo/k22pywwWd+68tsD71U+mTX6WO3ll5JLfcqjInz1z7V86f8E9vB+veBv2QfAmi+JtNazvJlnuZbd02tskkdlDD1xtr6MVGWZ3+0bomH/HuR0/GgBnv60UUVYBRRRQAUUUUFhRRRQQFFFFABRRRQWFFFFABRRRQQFFFFABTl4ANNpw6UrWK5bD4iA0sp6uMVSvbJdU0O90WQf663kX8SOKstncFB4HNPgbNysy/wC6fxNK5Fz8m7jQB4W8Ya7FqI2uLmXCsP8Aa4rz691+afWRbrjYC2c9CK+g/wBsPSYdA+MeoQWy7Y5VEh2jpuwea+WNVmY6vCLVgpJIPuK0ppxRTabPQfCa6rqt7PNoW6O2hBKnODgfe5r2H4aal/b8M2mabHtaJtobH3j/ABZ9a4Lw9e2mieB3ktFCXdyNsfHIB65r2z9njwgI9Na9lTaLjLxP7968rG15JnsYOlFq56z4W0VbCy8g8LjnHHNdtoFl5jeWE+TPBrNs7dRGLc/ez1q5q3jTTfCOn7JUBkAJyOa5Kb5nqa1KktkdskthpVuTfTImBnmsW9+KXh3TiYjcx4Br5o8efHGbWt4tZZUGSMBSOleL6n8RLm4uHSS6kzgnJzxXT7WlDqc31adbU+6Z/itpV3J5VmyRoe5aqV54ztydpkR1Po1fnNf/AB5ubGd9Ol1UxygnBLYrko/2q9ds9XbTLfWBJjoxfj86tuVVaM0UY0t0fqAviqNRkxcfWo5PENvOf3a4Pfmvzr8N/ti6ql2tpq16CGbbkHIr3rw38btN1Gzju2vxlwOM81wVsRVoM76MKNU+lF1m2kkManNNe9V5PKGK818P+LIL2MTq2Sfeunh1NWT7Qrda5vrEZHQsO4nQsd3G8VFPHxy4rEGp4PDmqt7rfl/xn86OeO5fIzpzYLsErSDNQXWlLND5jEVyMXit55NnnAKvqeKJfiDbGT7F5gyO+ePzpqrSqaGUpVo7kGv6aqRlVOa8/wBSs/Jck9a7+fXbC/UkyR/99CuR1+80/Jw6ce9Y1MLCWqOqhXklqzlpWkRsFqzdWdiuSaZfatF520SDr61W1CZZYN4bPHUdK53R5UdqqwZyviKT7RZSwdmBGa+SvirpCWt5LGgBdiTX1Xqs3yBcdeK+Z/iWrP42NpJyhRsfWvTy6XKzw81pKaujwGcIl3Irjk9PrXtv7FXwdi+N/wC0l4R8CX0b/YfPN7fkLkKkIL8/iBxXiuoRyi9mgdcSRs7c+g5/pX6o/wDBGj4Pi30vxf8AHTVrQGW6IsdNZl+6o3+YQf0/GvoEfLM/TQxwxbEgUKkKCFVAwoC5HA7UD5utIEZCWc/eJY/iaU/N0qkAh6U2nHpTaoAooooAKcOlNpw6UFjaKKKCAooooAKKKKCwooooAKcOlNpw6UEDacDmlIzTKACiiipZSlcMlvmUYFOwiMjb/wCNf50NvKhQMA1z3jHxx4c8DWIutWnTcPmClucj2rGU1HVmkaTnsfE3/BQaxs9N8dW99aagljLexIbuRsHeABgD0r4m00HU/EZ1GaLfbxf6iJTkSY6nNfpJ8T/CHwn/AGn2n1fUL4pfW0fkm1LYZOMKw9a+LvEn7PfjH4Ha1daGC2oWN25exvCMiFOpBP0p0sbGWhrPBTik2OspJrrSZZgMG4ZUAx09hX218G9Bk0rwDpcUq4Lpn3r4usB9rudN0q0G3Mq7/QnPNfoP4F0823hfTorgAeXCvH4Vw4ySk7nXhlKAXTR2NoznhsV5d4nuZ9RlZTypOMmvQfF1ygQhGwBXjHjfxUNIhd1BG0Ek46AV4eNxLpq0T1cLTjW3Ir7w/pFtJI0xgkLjPnNhRGO+fSvKPEur/CSW9uNL06O81KZOJFt7VnSRvQMox1rIXWm8czXHib4h+Ln8GfDvSywluwN0uuH/AJ5hOqema6iw+JXj+88Dyn9nv4TweGvCmjhmTXLqETSP/t/MMnPWubDUquLd7noT9nh0eS+JPhr4Y1rdqEvw8vl3g/bCVdWiH8JA6mvCfFnwq8A2lwLdLDULFZSWjMkTruA6/Meld/qf7TPxsSPV9R8cfFGGyu4N39ngaYAl6V7HjAq54E+KPxe+LGj6Tb+J9DsPGFrrxmL+VGkMtisffA5OcV7MMJisOr3PP+t4XEu1jy/w98DNJ19Vv/D3icLCDhIHPzKRXvngD4aXujRpY3Vwbi8UZSbd8oAriJPDGmpftrnhaKazkRyk1oxKlSpwflr0nwlq92LZVSdzCSBJIR8wPpXlYypXbszvo0KK1R6r4RlvrBgrA4HHNekWF9Pt3t0x0rmPCmntqaIVXqB+NenWfgm5ksg6jHFctOlN6mlSSRzg1Rky2a5jxF4lkg3MD2rpPEmkSaVatJkce9eM+MdeMUTAsPTrRUUol04cyucV45+KesWPnW1mggAyQvmdfxrwDW/2m/FyTS6PNP8A2fGp4lDBi1dx4ytNB1Iy/wBo3Bj6kyl8ba8lg8EeAr+7kSCz1HWZd3RI3A/MV6mDnQ6o4MTGrLY3tN/aT8Tq3zXxX3MnX3q+P2gfFM83mJIsoHJ/e9qqn4UfDsqo1XSNSt8gAbIHrotG/Zs8BazCJtE1p4m67JX2tn6E16U6+HSseesFiZu6ZreG/iXNrKPeSbo2cYwT3rs/DHxEsZoX0DUtVEfmHjcOSe1ctN8F9Z0iNFsiGVOOO9cl4j8I61pt4l99g3NH82Q/pXJVUWjpipxdmey6tvgcbzlWIwfavmH49Xq6T44MkJ+YoDXvvhbVbnW/D0V3f5LhguD14r5p/aTl3fER40b7sY4p4GN5GeNvyXZ5XfTy6ndS3ez97NIsYUdyc1/Q3+xr8Mbn4OfsxeBvBN9GFuvsv2m6G3BLTEvk/gVr8Q/2PfhOvxr/AGjfBvgW5Qm1ku/tN2QOAkWX59sgV/RJ5UdtPa2MIHkxxCIAdFC8D9K+gR8y9xaKO5oqkIZRRRVAFFFFABRRRQWFFFFQQFFFFABRRRVlhRRRQAUUUUAFFFLQJ7CHp9acvTFN6/hT+1T1uL/l1Ehupkt7R7id9q2aFya/Pz4r+PNY+KfxKvLaxaT7JZSbOG+U4NfZvxs8RL4b+HmqXqybXljKD15FfGPw/wBBMunzapb5NxfTEk45IJ5r5vOpOfupn1uQQjClOclubfhnwfq+i6hF4stXcra4XCnAbPXI7167qujWnj3wvd6bflTJJAzpuGW3AZ4Pat/SPD+n2uiWuj8s0qZfI6MR3rCjjl8O6s1uxJW0YK3uGNRh4ewaLrVVWi0fH/hvRCPGdloM8RW4N2RtxzhWr7/sbeG302NZFwYIUUD8K+a/Dfg6HWf2pbmaCMC109RLj+EE8819M3c3nuiqoAkJXH0rurzU42PIhDlkzjNd0yS8DOR615n4k8DvqrFHTj6V7ubIXRwq8CqGo6AgHyrz9K5J0ObU6aVb2LPmbVv2efDGvRI/ief7VbRnckanEan/AHOld14fu73wdoB8N3NxDdeGhC0SWscQXAIxzjrXba34fJjMkSmKTHEPUGvM/ENr4ktZG8uwKAZwM5H5VMYunsdnMsSfI3xm/Z+8fa2t1NYrb3vhvzWls4CoV0JOcZ61237J3w20f4O6jN488eWzf2wF2WkKOWjRTx90cdK7/WNQ1wGNX0y4vJZMg24BVVrM0/TvFhMcmn6A4klJ3LI2Qv51cMbUloxywVOGqML4w6F4c8c6/e+J/CM8mk6pagyl0gIjuT1246Uz4OaJqGv+HLvxPrWgjTbqzby/srHm57bsfrXoNt4b8XylYL7U4YEHP2ZYAf8Ax6uu0nwzdOVVV8mdf+W4GFx/u1nVXtNWa0X7PQveANJESqxHXnHp7V7toOjrdWOAP4TXnfh3S0t9qhe/Jx1NezeGbdIbDef7h/lWuGh+7Zy4up+8R8/fFCwSGG4gQnvXx58UJ7zz0srVWLFtqgd27Cvtb4pCPfddOc4r5P8AFNhGmuJLKm7e21TjOCe9eXNfvD1KOsEeQXvhG2tLy1tPGFpLf6nesoOgQkkzZ+6dw6U/4h+OPH/wk1rSPA+leGLbw09/tDySwB3tFbGM5GTwa9lsdCn8O65a+JdPkjk1SyZZXvZRvEfOVABrN/aT8La9+0HqmmeMNtvY67ZQGGdY3GL1cYBx2r08G0tzmxtJ20PDofjT8ZtH8W+KLA+J9I1+38KQpIxMEYE4cZwv97FS6F8a/BPxAtIRr2gzeF9ZupCLXVEJEMzDqD2FcWP2dPHVvcx6APAklncySN5Gr/bcgqfvlxnnHvX0XfeBPg54X+CK/DPV7+LxDd20ZdpUjCSCUjs3Xg121lSktTzKPtosp6Z4o1LQruDSfE92txbX6/6Jfq2UA+vTmtDXdK0y/wBN8y2OIhklSec+teA+Ctau9LV/hj4znluNGv5N2kXhG54ipyFz1Fe9aLFLc20f24ESbQkiryNo4U/lXz2Ibpyse017WlYwtDsJbN2YjgHIHbFfI/xxvDqPxO1qVTkKR+GAK+1bmMwyuqDjYx4+lfBvxCuZpfG+syAb2lmMQA5zkYr2crfPqeLmkuSioI/Rb/gjB8Nbe51Xx38XtRsiTp6xWVjIy9SwcuQfpxX6okhXjJU75SzH2B5r53/YE+E7/CD9ljwhoF5YNFqmsJJf3+YiGLSMzLn2C4x9a+i1kLooKjfJwp9MevpXtqSZ83Zoa3emU49KbWqdhpcwUUUUFhTh0ptOHSgA3e1G72o2+9G33oAbRRRUEBRRRQAUUUVZYUUUUAFFFFABRRRQAJ2px7fUU1O1OPb6il9hsj7LR4J+1nqHk+E7i0LcqUH51xnw28NxQaLok8qhfsqFzx6jvXR/tU2k15HLb5JV3iPHOMEVnaffppfhBWHVYQM/hXy+KfPN3PssAuTDQt1Ne6+KWi+GZHuNWgV0RWeU56heRiuK8P8Axe0j4zXF54o8Nac0FjpjmOeA/efB614Z4+17UNfu30zS53keZisWBnJ9DXvfwJ+GK/C/4b6j4h8TBIL/AFaJmjgwADx6Vy0K7rSsd2NwccLDmb3Nr4T6VbnxD4u8TqvN15e09xjsK7prxJZVuV5YcYrkvhfd2yeF5b1Mf6ZK+7n3robNN0jSryuelenUXLG6Pn4Pmk7nYaTCQnzAc81rNpcdxHkgVn6HDLIg3cD3rqYo1iiGRmuyhHnWpyVnc4bWfDzlSQv6VxOpaDMrklM/UV7PqDROvKjpXLajaxMThetRXopGuHrumjya70qXosMfpnyxmqiaA0pyygZ44GK9EurKKJSWAzWLOFDYXHWsX7NaHXF1HqYVr4SsIB5g5I5yeanaytgfLVMY9BW9HZSKu1iOfemmyWM7mXmodLnV0aqty7lbTbcJlCBXpnh9DDo78Z+Q9fpXD6RYG71ARr3r0O6jGkaRnIyVxWuHjamzjxFTmqI+d/iYib5lznk14DqWnRXUsgODz3FfRfji1jvLiUZ65NeF6rbC2v5EHY5rxaqtUPocN/DRitpQubJrSfIDDH1rl7zwXqmmK0+lPM5PP+sJr0rTY4dS+UDB6VvWumPb/KyblHqK0p177DqLueHCLW1iKX8E+CMZ3HIrnrzw/ZvK0htmyepIr6an0yyuh+/s0A+lYt54T0qYnZbAfhSqU6k9Ux050o7o+arbwTpdzerP9kG5TxuXp9PSu50TTzaOI0XhR/FXoF74QWPLxW4XHtXOanYzWfKjBH8qxqQ9puaUkozaOR1GKSC7u54BlXgk3j0GK+KPB3gPVfiL8Sby30UHZZXvnu5GduH4/UV9r6nLKr3Ey/6ue1mAHodprzb9mbwPcaboeqapYrm/1e5kAf8AuqrfpXdhKqw0X3PIq4f63ieR7H0rpX7bnx1+G62sfii5sNbsbNYoGSOFI2EajB4A64HWvvP4Y/Efw18XPBVh468HSiWw1Jczx5wUYdR+Br8c/il4cuhqlxLFO8t2PlYbjtAPXivtD/gmL4mujpnifwBPqxurOzKPbQkbfLJzuxXXhMY6krMyzXK44eHPFbH3OelNpx6Y9Dim17sdUfMP3XoOPSm049KbVDCiiigAooooAKKKKggKKKKACiiirAKKKKACiiigsKKKKABO1OPAz6c01O1OPSjoS5WZ5h8atDju9OXUkjz9rGJcjO3HT6V5Xc6Xcz+B5UskLXCqcL6gCvpPxHpI1/RrvT1Qfv1zF7Yr58E+o+G9RkedN1tDIEZO5GcdK8PG0uZ3R9DluJUVZ9Dzn4ReB45Zb/Wb7SXEzy5AZehB7elelfFHxAureEX8pTA2mRFcdO3pXf6dr1kZGOjaZCsRVdwIAOT14rgfibBYQ6fqkWpARC6jLYXsccVjRioRsdGMrOrK5yXwf1IXHgu3iByY5GJ5969b8PxfaGJI44NeB/Au4P8AZN3bE8RSNge2a970S6FraxyY65qIrlldmCXMrI65b5LcjBxgU9vEJCgK9cXf6y3JRqwLzXrtDw2M1f1pQJ+quZ6Vca9lOZRWZda3EE5kHNecTa/OI8tKceuayb/xWscZzJ+tQ8ejop5c2dnrniW3t1JZx+dcDeeMpDcsLeQY+tcJ4m8bSjIeTn61ytpqGq6nMxtGbGc5xxivMrYl16isezRwPsIXZ9PeDLe91izgm+aQ565ruv8AhEr6VHkl2KoXPLYrzH4eeOY9F8GQ+aqpNyPmPOa4/wCJH7VPgvwFYzXXjHxDJAmOEiUsfyFeq8WqVNI82vhHXnoe6aBfWmh3TXEyoxclR82af4j8Q2l9btbrKU3c9a+Zfhf+0z8JPjHLJbeD/EMhmi58u4UxuT7A813Vz4o8hWedt4Q4681j9d15XoZRy9p3NrxHb20tlJe+cBKo4GeteB6pFcanq8iq3zBiAK6/XvFzuzbJsRNxycCuc0qJpNQN+Mlc5BHSuepPnPTow9mrMpaXFNpGprp2oDazHg16npenG5jWO4/1JGQcVwfipo7rF+6gTJ0IrpfBXiwXNktpdEZXABqKaRpWi2rnQy6IgH3eKrnRIv7orpYJbe4wBjpUklrCMn2rq5LnC3ys4DVNMVIjhMV554lsVCt8nbNevawp8psKMV534hiJVsqK46ytI66UvdPC/Fg+xWcly33pUdCPTjiuo+DGgQeEvhxa3V6u2bV5JGORyoz29K5n4kSLBbzvJ/q8hh7YqXwP8W9I8YaJFZxgKmn/ALtB056Vqpe6TGHNO5yPjf8A0nxdfWMZy1wpYfhXsv8AwTj1KS0+Lt3YMcfaUkGOmcA15NfWX2jx8k3XEbfrXqX7DWnz2P7Q1vHH90CYtjkc5pYJ/wC1I7MzSjgWn2P0zf7z/wC+386ZT5PvP/vH+dMr62MrTPzba7CiiiqAKKKKACiiirLCiiioICiiigAop9FWAyiiigAooooLCiiigApw6YptOHIxSRM4iq6xtsBOI/u+9ecfEDwdAurw64gBFwcSDsPwr0YhGfZ3g5f3rP8AEloL3RZgQSx+ZcdRiuapTUjooTcXoeA65aappfiANaFiMAgKcA/hVXxhoF7qHgTWtU1FyGkAKhj6eld3c6poaPFf3ckfdTvYA8fWvL/H/wATtK8RSxeCNMfi43bjHyox6kdK8KpNxlZHuwhzxuzhPgWQJtZJPIZRivcI7sJYHBrwn4Wq1h4q1jTlOQGUcV61eXnk/wCj549e1Z4ipyxuFBe9Ylub4xA/OK57U9Uzn95TdQuQwIDmuW1O42k5k47/AErxatdnq0YokvdelhjMTyb4D15rj9e8U21tGVaby4QMjJo1CVnkY2Tl7cDv615trNu2saoba/lMdsp3Ht0qablNnepxgatmL3xVeCWUN9mDce4r2bwn4dhgtFVogYQBzjnNeWaJ4v8AD1ggW0QGBfk4HPFes+FvEZvbJZYVxbdRnivXwuC5dWcVbMeeNkSeNPCl1PpDLZXBtbgr8hB49q+VPEPwy8TPr7y+MYhqtrklUYAjH0NfVfjHWJzp4k02Q3QxzjtXA2iarq1wvmIynPIK5roq4VVNDjw+LalqeS+F/APw+0DULTxh4d8MyaZqVq+NsR2qeecgda9bvdduLydJIJt8t2mZQTgDHaoNfutM8Nhgii6aPgr5eOTXJ6ldsqxRMWt7i/G+LHOAOo9q854dxep6caqkcB8WtL+LHja2lg8JeIRosEZ+6Dktj3rz34ffEb45fC/X4NJ8d6udU0gtsAfHGe+cCvUtVuNSneRrZZLSJTg85JI71RtdE0DxJqNvb+JMTxqc5ZtvIrem2o8pMrc1z1seJh4jskeyBEbKG/OrGm3h02ZfKPzZ5qra2+n2lmiaR5flgBQA3YVFdbldWQHd1Nc0puB0JKeh6zofiEtGp3dvWt//AISEiPrXj2j6rKiAbv1rfj1aSSMHcPzqoYroYVMPY6y+1NJN+D2rh9euVMDnNaLagp3HcOlch4k1RFgfkd6irU5pCUOSJ4t8btUeHwvfm3GZJcRqB15rxr4WzXWh6h/ZFwNkpYNt6ZzXo3xf1WOBbBZMFLiUEqT6GuP0K1Ou/E5LyyH7nYpO3lRj3rrhG8SKMvePUPEc7aLdHWYOZbdAjj/eFfS//BPrwXcXHivVfFcy/urBTlz3Lg96+VtW1Aar4lCn5rTIgmUckseFwO/Nfpz+y78ND8MvhHY2N6mL/Ux59wxGGwc7R+X866MBSvibnPnuK5cPy9z1g8szerE/rSU8dKK+nlG0z4p607jKKKKRCCnDpTacOlAxtFPoqyxlFFFBAUUUUAPoplFBYUUUUAFFFFBAUUUUAFFFFBY4n86VT+PGOaYTQDn60nqF7HAeLvgb4X8Yz+fNfy2oY5aJGwD6965T4ifCrwD8Nfhbq8/hzR1ivZdn+kOd0hORnBPQV7S0avtElrum7OD0ryr9pu+ntvhmtpA+6edsY9a43QUVexrHEzbWp8qfDrUDbfEa5mLfu5lUEk98V7HqMSqfJfO2XJBr500C8m07XWjc/vFKkkGvfLTWYdU0q3LY8xBgnPNfPY7qe3hJtq5SeF1BV2zWBqljCzZZSTXQ3EtuGwjZNVLlSwBCivBlTbZ61OVjnYdEE3KYCgEmvnb4o+Kv7F1C6tIxlg23A9a+pdQtZotOZrVsMVNfL/jDwY9xql3f6id5aUYHvnivUwiUUTVfMV/h7pXibUL7T5ZbJLWG8bMhdsgD1r6h8PR+HtFzHquqKQgGwIMhvUV8B/EH4keOtJ+Ith4A0e1eyedQIn3Hb07HpX0P8Hvhx8ZvEGl2l1e6sZAkgjlP3gFY4zXbOc7BThh1ufSU2peGC5vLLT0htUGCu/IJPeqa6nY2sp+zWEcUC8lhyTmqOu/s4eP9E1Sz0DQtee/sb0K8kp42E9RVL4ifCH4ifC2S0vra8bVY73EfkgZ2seKUeextfBaak2rWvhDVpv3/AMkh/iKcZrntR8I6JbsJF1ZJkPRcZK1W8Q+H/in4Zs/N13w04iZRJuUZIB5rg4fEeozyMthpl5NJ/EqxkjHeoqKR1UXh31Onk8DaZPPLImtI6sDtO3gGvGfGHwv8V6dqc2pSXButPOSgjOMHt0r0SPxjZaer21xp9xFGeu9SHB78daoHxksULlZzJbk58qXhh9VPNZKcom06VCfU8ZHirxR4UhSa9nljCsflbPTtXpvgP4qaX4yKWU9+kUyrg7uMmoPEVx4X8VQsdTs40lZcIq+tfOHiHT9T8AeLTqoV4rEtuTaetdL5qy1R52IpwwMr03c+xvOkspPJXJjJzmr9tqXlsArEr9a85+FXjyPxzpW1iDLtABPbHrXa7fspaBj83Y151ahGmztoVfrMfeNmbUgi7lNclr199oYljjHStKaUxxYJrmfEUnl2xlVh0J61zpPmM60k4nhnj6J/F/xF0Pwyjk+bv80A9AK6+Cy0jwXCNL8Kp5t2QVmY8kevNcJ4SuX1P4n6tr1vuZtP/dpx/e44r0PR/D+o6nq8Gg6QjSatqcwRSBk4Y8168b8qOKg1F3uet/sZ/Buf4o/FBNW1CBv7E8Ov507MPlkk6ge/Nfp3IFEnl4AKgJGB0wK89+B/wo074PfDvT/Ctrbxi/MayanOv3pHOev06V6ECBITJ99R8le/gsP7OJ8tmmK+uVLrYQ9MU2nHpTa7b2ZySjywQUUUUyUFFFFAwooooICiiigAooooAKKKKCwpw6U2nDpQAHpTacelNoICiiigAooooLCnDpTacOlAArlSRXjn7UzPb+BbW6C58rdn8cV7IWBheXuDXA/HnSI9d+F+ol1yYFDL+lZ1pe6VBq9z8/PDTSPeXd9dD5g4716t4X1PN15KggSAV4D4O1rULjxlr+izgbLd1wB6V6/ouoSRTRPCAGHFfL4tczPocHOKR6GxX7SGTmpQnmTZJrO06RnIdzya3ILfzhuFef7M6+awTR262MmQTxXimq6Qb3XZQsZILYA7V7bMjBTEV4IxWNYeHoX1FpWiHr0remuUtO+55fdfBbw94y+y2+u2AtZ7XPl3iDLKT0561r/DTRvi/wDAnWbpba9Pijw/fTRhIW4MaZ5P4V7BYW6Qqbe3jEMUvByNxrR8h4kCv80cfeu+jyyepnVdOSsjrR8cdFm+KGg+C9F06W5h1K3L6jeMpVbJgvAz0r0W5vvDur6lpunzXdtfTbna2DSD97jv+FeM2P8AZM21RdRW3ngrJIIxvmH17VzPiDwJ/ZuoWupaJqk48gk284lP+j568e9epGELHD9R9p8LPovxhbxXNpcQXvksShj37NwGRjFcx4P8EeHPCOhxWcenxST+YZDM9vnIJz1rwPWm+KV3Z3GjaN8TzZruVvNeHcSetatj8Vfi14ds4tL1fW4dcjUAGYRBCcVhaEmaQy6vG1mekaz8L/AmsfEiPxbr2gw+QVAj2L8rMPVRXnfjj4B+ANV8Q+K/FF/paWt3JEsOnxo+IySMBsdBiuOPxf8AiRpHiPXNduj9rt9TjCW1kRxbHGNwrgtd+KHjl/DM+g61rBkmv5C4vB96EZ4WsJ04HbDAV+58SfGfXfEHwV+JjeBW1Y6rJYzl7hk5AVzlVB9hXpN/Zf8ACWaJY3WpQ4eSLdbhh6jnNejaZ8HfDOveIrrxFqemDUdTvAGnllOfu9DzTPFujw2drsZBbyR5S0QdAKU60IK0UOrhalOX7x3OM+BOmPpeoapaqpERJ5r2iEpMInz8sZNcj4H0+30nR/NKDzrknJxzXTrKtvAbUdW5zXj4iMq7ud9L4PdK2t3JRhGnP0rz74haxa6fpcklxNsCwux59Bmuu1C52sXkYDHrXzt8fdYublLa0gcqs93DbkA8srnBH41dGhzTSObEVOSDOy/Z68CfErXvDd5460jwTcT6Xqszx6febCfO2nDV91fsk/s3eJdL8VxfEn4g6H/Zj6arDT7V/mMm4HLHPpX0Z8CPBdh8Ofgt4N8H6dpkUdvZ6dEwi2j5C67yT75Y13Mck7QhGuxOZSdkgXaE9sV9LSwceVM+VqZhJNxQ8ksxJ7mkoor0qVlGxwcrXvMRulNpx6U2sd5CU+fQKKKK1LCiiigAop9FBAyiiigAooooAKKKKCwooooAKKKKACiiigAooooAKcOlNpw6UAOYDy1P96srxVpI1jwprOjDrPbuR+Az/StRU3skZONoJ+tLE4zHLIOJsxEH3OKicLolaM/HXS7qXSPi7rccWVWed0IPscV7Xo80bWqXJB3Qn+dcH+1X4O/4V1+0JqEekfJbAi4yeM7+f61t+DPFVjqWmw2QAE03XPBr57GUXc9vCz0PaNDkWSAc9Rmutswv2faDXnmg3hRdhI44rrtJv2dtjHH1riaPRgjZmizUaAoeO9WYm8ztxUjW44xW1OncuUrCRJ5fzLyOtWBcnBL9O9XYbApb7mGajubRTBuAxWk6PLsQlE5nWdQtGO+1lEZX3rCfxZfW37uW5Dr069q0PE3h37XG0kTtGcdq8P8AG+meLbORhpU0hxzzWSr1aZ20nFI9htPE2nPdDzX+U9SKk1HX/C0EwlZmY+lfLUnjb4gaSf8ASdNc84OK19M8ea9eKJLzTW545qvrEkjalPU9O8YeK47icx6db8HjIFcbF4buNSuvtM7NyQSCeK0NMu2usM0HJ55FbdtHIPmY4FclXESZ2KZYsbS20+LbEvOMVwvjjT47uTcy8ZBru5bhYYyzAZx3rgvE+oSXLlYwAB3p0k7HHX1ZlQSGNliVhjAFXNRuEgtQXlGayYUC5lZ+nNcl4k8QNJM1ukuMA96hU25ESmoxLOt+JLdpRHOT5aehrhPhz4RX41ftT+B/h5J81i9x9rc9v3RLc/lWJ4k1+a1gNxOco2cYPpX0B/wSq+H1341+PXiT4qXyn7L4Wha3gZhxulUjg/r+FepgqL5jx8yrqUdD9YJIo4tkcR4ijWIAcAYzTVJHQUgB3u2eC7EfQk1ICB1r6GGiPmlqxtFFFUWIelNpx6U2gQ49KbTj0ptAwooooAKKKKACiiiggKKKKACiiigsKKKKACiiigAooooAKKKKACiiigB4VTKEn5iXmEDqTSAs+4eR5km9fl6Ac0Iy/wCuKlpovlVPrXz5+1f+0HrXw1060+HXw4hW68f+JnSC2VBu+zo5w0h9CAc0ubQT0Z5d+218P/C3jXxHdXeh3n9o65YQq2o2kR/49eBtJYdz6dq+MfDfiCfRS9pqUDQ30TFVk6CQD/Cv0tsPhFpnwt+GEGkarcSar4j1dQ+ta1KMyXMrclcZ4AJAH09+Pjn9of4K3OmltZ0OBXji+dwo/wBXn/GvMxSTZ3YabSK/hrx4k+nIftw+0KelemaF4le6jS4vrxQAMDAxXxZZ+Kn0a9bKt8vGK9N8GfEG5uLb7VeoRCDgLnn8q8+VKx3U8Q2fX+l63DJChEgro7GQXsy7XHFfPOieOrUxxosh7c9q9K8OeLkDo4k4I9aIe6dHPc9ms0B/chgeKZLYxzTmJmxXKweL7a3iFwZB9M81Zg8V290jXAlAIUnrXRBdzOSkdSlhYJGfOtgT71ga/wCHNBvo/wB5ZqOOorHsfGN5qimRpgArEYp974gWWPyzMM+tOUqa3HByRyms+AdEmG0WSH8KxLn4eaHaQlntF9a6q/1wQgM0wNZV7qh1GEBZgPeuCqoo9ClNo5J9L0+yGIsccDioTGpOVq1qhgt5MFg30NULnUII4sqACRgVx2TOxTM3WrmBI5GnbDgcV5vLcPeSypKfkzxzXQeJdQMcMonb58HHNefaTqUonlN04KEnbg1vTjZHPVq3Zqahd/YbWYq/8Jrw7WNdmXUJ5Gc4yfyr0PxjrS2dtKTIOQeM8189+JfEsQMrbu5z7CurD07vU8/FYhpEPi/xSgtJ5ApIGYoh1812BxgV+xX/AATq+FUnws/Zd0OXXtLe21rxMGu75GGHIJbYD3+7z+Nfmv8AsFfs7TftRfHO1udXhJ8E+BGW7vifuzvkmNM9yWAP0FfuFFHACslvbiIWA8mGIcKUHAwPTGK9ihRUDwa9ZzJewHtRR7+vNFdrVkcsRlFFFBoFFFFADj0ptOPSm0AFFFFABRRRQAUUUUGaCiiigpBRRRQUFFFFABRRRQAUUUUAFOHSm04dKW4CxyKjNNj964wKYkc0UTLcyD5zuApy7dzSTDGzkVBe31jpdjLrmr3Cx28ClyXOAMUcojm/id8Q9L+FvhK88XavIn2gr5dnDnmRzgDj8a+NfglJc/E79qjSta1799e2cc9zdGT5sjaWQDPSs/48/Fy8+Kvi57pXZdF01ymnQ9A5B5JFXv2L38v4/XL3pzJdWspgPcgKc1cYcsRbn2l8R42l0xbxcMEZkx9DXgvibT9P1XTbiwvoifPGK+i/FNqt14dvkjBJhdyPzrwK83zqrtGMqTxXi4+99D1MuS6nwX8fPgJ4g8N623iXQx5lmvzGIDPH0rzLTbi9tYft0pKkMFaHOP0r9GNe0O31eKRbsCR2GNjDIxXzR8U/gBFAJdZ0qTZO2f3Q6Vy0q6bszor4ZrVHm0PjeCxMWmxyAoAGJFdr4f8AigzXkdnA+QB1rwm78Nanod/JBfs5YZOSOB+NZj+IrnSmkeCUbxkA5rsspHHGo6WjPruy8a3t1cS3V3c7kt+GUNxz0rVg8Z3X2aUwsSynJ57dq+PfDnxVn0izafVbl3QuFmPYknj6139r481O713R9H05wWlRpLkg8beoye3FKNE0WKufR+n+L7iAOJpwrzjOM1DN8QcxtG1wN8JwefWvnzUPHUs2qPeRXOIrUlThuM1ial4+WCQ3hnJW4YDAOT+VRUpGkcQfRt/41kafHm8YHepJPG8SWG3zxk+9fNb/ABHdL7yXlJyopl98RVtoSzzcE9M1i6NzrWLR9AXHi2PIUTZ+pzWbqXibYm7zhyPWvCYPHjXThhNj8az/ABB44ulj2pP29aj6vdg8Weh+MfGMS2bQxzgk+9cnoWqtP8zS8A569PevLrrXLu6J82ckZz1pbTxU9opRZDwpziun6vynKsVzG38VPGFv5rrDlpGwsEgPFx6/TFeceEvBnif4seNdM+FvgiwkvfEWuTrCWjGVWM/fLemBzUFza+IfiH4p0zwj4UtTfanrc4gsbVTyrMSMk9vX8K/aD9iT9ifwv+yv4VTWdaSHVviFq0QbUdRYZNsrZ/dx5JwByCe9dFKjbU4sRWu7Hov7MH7O3gb9mj4YxfDjwvte9EaT63ekfNczsDnJ9Bkge35V61GA7xxyjYcHyfYe9RybPLX7Qc2anc8n8UjE8frUj72dVusKX+7t/hHavRRyDx15prU4daa1MY2iiigAooooAKKKKACiiigAooooAKKKKDND6KKKCkMooooKCnDpTacOlAC0UZFFADKKWkoAcelOXvTT0qREY9VwPVuBilFAQna6tc3Ug+yoN3PAAHUmvj39pX45DxrqMngTwtckaDZsBezxtj7Sw7A+1dt+038d10i1f4eeC7ofarobb+4jORbj0B75r5FuzHBELYkoOWznJJPUk981so31EUtYvEfMaDAXAGOMYr0L9mHXYNI/aF8MyzuFXUYZoQT0BKkV5VfXCbjms+y8Xv4U8TeH/E8LbX0u9iXI9GbmrbuhLRH68yxfaZptPIxG4Jfj1NeC+LtKfSNaurPaRGzZjPY17lbXo1TTLXWLB1K6jbxSKwORyM/1rnPiH4OHiuyiNgwS6sQWf1YY6e9eViaXOjpwtf2crHhF1AduRXO65p0F9CY5PSulklxI0TqcqxUqwwwx6isy+jjaQ4FeBKLpu59JTarI+fPiX8Jl1y1eGyuFjLZ+bbz+dfKPxG+CeueHWMkVxJMCcnBzx3r9EtRtYbhCssO0n0rhfE/guC8iYi0WYMCMEeta08S4mNfAp6n55zaWlwLfTYGEcEAJO7+JvetDTNTu9G0bUDZowuOEDE/Nt74NfQnjD9nyDU4pDpDeTdW5L46ZzXg/jf4f+N/DcZu7iHFqpw+3kkfSu+liFLQ8d4dxMTVNVli0KCC0nbcW3H5uc981mWmp3smpwPPIcLjr0rMuL+zbbDEz4HqMc0xbyBJw7v0HrXVpIhxcTf1PVXTV/tCycAetYGr65PeX4xIcDoM8VmXN+0shYyc59aphlVzKzdietRYjmZ0Vl4jeJvInkP51avtfW6UW8OWI681xFteW0ga5Z+QTjJp2i313damRaxOwB6hciq5EF5M6mXUAzBOY1H8J6mpotO1nxEBaeHYWSTIVnI7dzW1onw51nxLfx394jRRqRlcYBFe4aL4YstC09fs8CpIqEF8deK5511ex20cM2rm9+x/8D4tJXxd4r0qH7X4x0KEahp9yeiLGpeQL6Hiv01/Zg/aC0L9pf4P6X8SdD2Jfq72eq2rHD2s0ZYEMOozgMPUGvl39j7RorHw7fXW/yH1WGWPdjO4EYI/Gvmn9nb9o6w/Y7/bK8YeDPEDGz8B+KtR+z6tCFLLZyncY5lA7BnwSP4T6CuzDPmV2ceLp8rP2S3R9D+Xagjb8y8n3psUttdok1vIkkU0azQyxnKPG3KkHvxg/jSozbymDxXWcyEopT+VJQMKKKKACiiigAooooAKKKKACiiigAooooICiiigAooopcxVwpw6UnPpSjpgUXC4oBl5WHb9TQVkHBIAoSNpFLST+Wo/vcVyfi74peAfA4/4nWrKzgH5YjvJPpxQtRtnWo6M/kgN5h6fKcfnWdrWtaN4dhNz4h1y3sY+oy2SR9MV80+Of2rfFGoQPB4P05NOjOVBcBmI7HOOK+fPFXi7xd4huGudUvpnlY5OZSRn6VapNkNn1z4v/AGsvA2gmWPw5pv8Aa0q5AkLhBn8RXjesftI/ErxmJ4479NNsnBGyMAnb6ZFfNWrQxTgx6rrRhl7RqOv4iul0C5S20I21tK0Df89TyWFaKJV0XdcuQ5aTezMWLMzHLMfc1zV7fb12+gq7fXBYbSawLw7ctW8dAuUL+43Ia53Vo1vbZ4+6KZF/3lGRWpdz5cpWRMSs3Xik9iT9Jv2JfiQnxG+AWkLczk6l4eLW92hOWGN23P4fyr3wllWOaM4lPD+/pX5r/sCfEh/Avxv1HwNeT403xku+JXOFSRAcY+p/nX6UsiJOmWP7ncZM9welcVSOoHlnxb+HdxdrJ4v8LYGq2o3X8SjidAOw9eteO22p2+sIb20TyAuUktX4ZGHU+tfWDOvFyP8AlnkIv/PUH1rx/wCKnwefU7iTxj4LX7PeMN15brwCAOcD1rzcXhrrQ9bA4z2LtI8luIcn5cGq62av9/ii2vPMJV1ZHVirK42tkdeKssjScofwrwJQcGfQcyxKujnNZ8PWs+TEmPcV5p4x+Gg1kFMjBGCD0r2sjAxIoqjcaZbyksWxSdNQ1TIdGL0Pijx3+zmbSF3t4lJOW+UV4N4g+F+oWE7xizkOOOAa/Tm/8PQXUDCRQ31rzHxJ4AtZpyVskIz/AHauGNlT0RDwMZn56f8ACvNfJ2w2MvPqDWnYfBjxNfjLRMue2K+5T4IsLYbnsI+P9mqV1pFvCcQwKuPQVvDMGzn/ALLVz5J0n9me5lcPqcxA69cV6P4e+EGkeHVVI1RiMZO3NexS6dE5+8RUUmlJGM9fWnPGSZ008vjExLPSLSzxHEg+zkDkCm6zDFb6fIqLlpZEjgXu2eDWxcbbRQzAGBetaHwU8Lz/ABU+KlvBjdpnhomS44+VieRzWVO9SaZtWccNTaPpz4MeGH8J+E9OtJlwzoH5HTdX5Vfty2Bsv2lfEwZeJ2Rs++OtfsjfwJa29nHEAArKgx6Bq/I//goXbCP9pXUgo+/HGf0FfT0l7iPkK8vaTbPpX/gnh/wUS0jwdocHwN+P2tGHRrJSug67NljAuWPlSHBJAz8p7dK/TTwf8Ufhv8QbRNS8E+O9J1WCXh3FyocjthSAf0r+aAJE5KSL5a5y7ddv0+tdToWv3enyprXh3WdS06/tSCViumVSR0bA/PFWc5/S9NG0CLHNaNMM/eTJx9acwkDLsgVkx93dg1+I3wc/4KV/tN/C8wafqutx+NtPQjMFzGN4X0DkZFfcXwg/4Ko/ATx7Ilj8SLGbwLqjYQvKTLGWJ9QuQPzoA+1uQv7y1EcnqGzUbeZGN4/fMf4R2rL8MeKPCnjKzTVvBXiWx1a3dd2YrgMcH26j8RWuDIpMoieJhwcqcVQDaKM55pefSmAlFPooLGUUUUAFFFFABRS0nHrQQFH1p4QnopP0pfL7syJ/vtigBEG1SY4gVHVielIPKkbELmV+64xiua8RfEjwH4XBk1nWljkXpDGd+T+FeW+Jf2j9TuWaHwfoqpFjAuGIyffFNQ1Fc9zuZoNNjNxe6jBb26jLF2wRXm3ij9oPwPoEjW2hqdVu1zkLkKPxr528R+Ldd8RN5viDVJrog5+VygH4CucudVjWPyoEVgO2OfzraNK+4XPQ/Gnxt8deKVMUE4gtcnKp8pA/CvMNQ1GJiZI2drj+NpW359etZ97rAUcS7T6Cub1LWJHJz8vuK0VJIbZe1HVFUEZ/KuS1TVgWOD+tV9R1RsHmubvb5m5JrTRENlLUr0y6imOTu7132my7dPT6CvO4Y/Ou1kI713VlNi1VB6UuUq5PdNxWLenqRWpcuT37Vk3fP40guc9dHBP1rOm5rWuowPzrOnTPFJDKQ1fUPDeo6d4x08t9p0S6jkg2nBK7st+lfsR8M/HOnfE/4e6P4406UPFqNshbBzhwPm/Wvx8mgSW3ktuu5Sig98jFfXf/AATY+L5gh8Q/AvVrgs2iuJLIOeTuzkKO4rCogPupkxTN5U/KcH/PWnscEj0OKjZc81z6VNCpR5djzb4mfCW18Xb9Q0B0tvEEI3PIo2o49MdK8GuDe6ddvpOqRtbX0J2yM3Ak+lfXkqo4WJ3MOw5SUdXPoa4r4kfDbRvHtmonRbXVYxmKRRjeR0ya87E4RPU9LCY6VLQ+fkmWT93IhX3omwq7HIZOxFVdWi1bwhqC6B4thaOYkqku35CO3zVK0TlxHDIHU8gg5H514FWlKO57lO8tURSEvwOlZOoWZbrjmtCUSR9TjFYuo38kZIz7VzcyjozqhcxNWt4o1I4rlr2IM3AFb97JLLnJrNkt+55rSMUjaEmzGWzhLbzVS/SNQdorXuIo0i4PNct4l1m30m1aeU8gEgd93YYpyki5JxVzg/iJrl3ZW8GkaPE01/qziCK2Xlsk4zivtH9m74S/8Kf8AQaZfgS63qqLPqE+OcHkLmvLP2Y/gNda9qg+N3xAtibvJGmWci8Bf72D7V9XTrNCVSEb7I8tKeufT8K9/LcMpLmZ8xmeLc3yoxdWlbzAOv7xB+or8lv+Ciw8v9pG/b1hj/kK/WPVmAYP6SJj/voV+S3/AAUMuBP+0nqK5+5FH+HAr1NnY8h+7G58z4LZqxazeUfxqEDaKSMbjkVJkdDDMDhlP5VY+0pINjRI3uUGfzrEtZyrbSa0BIqAN60Adh4I+IXjX4fasms+BPHOqaNexHckZuHeMn/d6V9p/Bn/AIKx/GLwtGNP+MPhOPxdaDC/aLcLBJt7sTjn8c18BRyyMdxwD61ciuJEGZH8wentWoH7q/B79vH9mX40Pb2Gi+NYtI1STGbG8Xy8Me28jB/SvoOPNwi3tvfRzQkZXyD5gYeoIr+bMGzuVQlWiiB4S3PlOD/vDmvZfhJ+0/8AHz4MTpH8O/iPcLYcZsL4G5BH93LUAfvSoEo3Qxsyju4Kc/jR8+MTOFQenNfnJ8M/+Cs8rpHpnxm+GjIOA97bSAL7ttwf0r6z+Gv7Yf7OXxVgjt/C/wASLa3ncgfZLkeWVY9skY/Wgo9mA3ffODQD2PSliUXkfmwXFvKmAQ0Mm8EdjxTQx3eWUdSP7ykUwCin8etHPpQMSVoLcb7q5itlH/PRwv8AOuO8U/GH4d+E/l1HUBcMP+eXzc/hXzJ4h8Y+KvExA8Q+IJb1emEJj/lWGklhariGAgnqZG3/AM61VFoyPadf/agu50MfhTSPK7BnXP0rzfXviF458UsX1fWHgB52xtt49OK5WXUgATGFU+wrNn1HcTvJY/WtoxURG1Jcxxn5naT3kbdz+NUbvVQvCtj6cVi3OoMp+9Wbcal2J/WtrkpGnd6lkEZz+NYd5qR7HH0NVLzUuP8A69Yd3qR5pXNky/eagp6msS7vRzz2qlc6gT1NZtzek8E5zUGY67uBIDg1mspY1Oee9IFAoASFNhTI710sJwEPqKwAuXQe9bUzGJEPTinJlkzyAis66+Y5FD3B5+aoy+7ms4sDPuI8niqFwmOta0o4yazLw4qkBn3HmPC0g4a0I2++aPhz4+b4Q/Hjwn8SYif3kwt7gA4Uhzj5h3qO9na2trmYkBYMbwepz6Vx+rWL6lbTXUv8I8yD/ZYDIqJgfubpmo22sW0WoW0ge1uYY54HB4YsMmrbkCOTysZr5K/YQ+Nt34++E+naVq0pku/DrNDOWPzFSSFyK+rzJiUNEcgjJFcfLbYBrjjntUDr6irRGaYUo3A5Hxj4P0bxhpL6LrsCzQyAiFgvzo3+91r5m8SeGPFHwq1JtI1aJ7jSpG/0eYc7B2ya+wniljP+ixCSVuHDfwj1FZHiHw/p3iCybStXgWe0lUq8jLkoT6Vx4zCe1Wh2YHH4jCvk6HyZNqCOn7wickZEingCsC8WKRiUb5vWur8f/DXXvhtfmGwD3WhOxYzEZwDXJMlvOwnic/ZT1PfNfL16NSg7WPqsK4yXPczZIkBqCWAAEnpWq1su7OMjtWTrl7DYx7nZVAGeTiojzSdjsbpwXtEcxr1/b2Vr9qdfKWHJXccAYrW+CHwbv/i74jTx34wtpIvDVs+YVYbftzr047AVsfDj4IeJvjnrUWo63A9p4TsHEjBhsa/wf0A/WvsHT9J0/R7KGy0m2SLS7JBHsUYAxwOK9jCYOU9WjwcdnHt37NIoQ2QtLVYkRFRFCIqLgKo6DH0qpdRHyjuyPatl1POenUfSsjU5Q2UHFfQU1yqx4Kd3qchrEnlTrOeiEHH0Ir8ff21dQOtftI+JNQQ5V/LAPbgYr9c9faTZcruxticg/QV+RX7RumSz+NdT1twd8s5Ukj0NOegpHiUqY7VAMA81pXEDBc+1UGiINc6Mh0b4OavwScD3rNUYq3D0qkgNJDU6GqqHOKsKc9KYF+FgOaupcMOnFZcTYIyatLOoHSgDVjvMj5hu/wB4ZqxFPCT8rSQY5zA/lnP1FYiynHBqSK4IOQa2TYHunws/aO+NvwvlW48C/FC7tY162N3mcSAdstX2H8Mf+CqPiC2to7P4ufDwXBQgNe2rhcju23H9K/NaK7k652+1X7fVJV4EpTnq3NF7gfuj8Lv2tf2e/jAif8It45t4rlv+WF1+5YN6DIwcV7BGsk0Pn2l3EY2+7JCfMyPwFfzuxanG1wLmWWVJBysls/lYPr8te1/Cf9rb48fCaQp4Y8ePcWJXaLe8Tzh/48DRylH1pNquRwf1qk+qc9f1rDOok+tVpb/ng4rv5rmRvSaiuDzWXcakMkg1kzaicH5qy7nUWz14o3A2LjVB0zWbc6pxnPFY9xqJJ61nT6icdaVx2NefUhjO6sqe/BJPWs+W8Y96pyXRJ60XC5PLdEnHNQh8mqbTe9PjnB45pCL6HNWEXPSqkROR71pQqDgmgCOaewtHin1SURQ2xzvPAFaGp39jMsV9Z6hFfWk4wBGwyvvxUGteHdM8T6FdaPqEhiFwhCuOoOK+Zb7wj8VPhleXN34bv5tQ06BziNiTwe2KibLPfZr0Q3X2Y3BuFJ4OMY9qvwTuXCSRhY/XNeEeH/jtp5nGm+LNOm065cgByhxn616xoWv6RqMQks9VhuVYZGHGcVEWB0UsbyKXLDyBWPdzrE5ErgQAZq9LcgWzTbsW47npXI3TNq9w0cbkW6nJPTOK1QDVU6tN9vnVlt1OB6HFRXnllshf9GHFWbi7IiFvCoWAcYHtVCWSQpsx+5qJgev/ALE3jefwR8bv+EcebZZeIVPX7uRnHFfqPod67Rbi378E8H0zX4pwapfeF9b0rxbp0pSTSLmMkjqVJ5r9gvhf4otPGnhDSvFtmwxd28YbHQsF5rFoD0JXz+NKTmmRjPvUoT86xYAWVV8x1Jf0FNkjcJ9okkDqePKHUVKHOcQqDc9x2xXDfFf4u+D/AIR2B1DVZhLqUi4jtkOWZsccfWlKfsldm9CnVrSVKKuzpdV03SLnTrmHxKsJ0vYSXm+Xy+O2etfMutfCOW/1S5v/AATq/wBo0Euf3wj+6c9AO9eHfE3x/wDG74v6l9v1P4hf2DpyMWj0WGPA29iWHWqnh74xfG7wBb+RpmvR6hAg2hWQYUeuO9eXXxFKo7NH2eE4TzCFP2re57bffBXxuvFvK63uP3VqsZYSemT2rV+Hv7Juq32qjxH8YNQtxCrhotJM2FJHQlh/KvE5P2wPjfp9q0WnmGDzvvXLoGJPoM9K8Z+K/wAXvil8R7I6L4p8aXtvbyN5hjglZGJHQ7h0rBU6cNbGkslzRJ0+h+skmiw6Xp8dvZ6bEIUUKv2YHaqjpwPasS5hVJAFg8xT/B0r8sPh3+1p+0B8IzDZaT4vbX9OjwHguV3HaO2TX2J8Ff28/hZ8TriLRvGiL4U1g4jaeQ5SSQ8Y6dzXo4bFRjojwsbkGOwd6klc96uYsIWIxXKarOHcqK6vxCzWahRIjpIoeOVG3I6noQehrjJUMjlz1PavQVjw0mnqcv4gi32kwI6xt/KvzQ/ap0JrVZbkqADKTkD3r9QtYs91k7dfkbj8K+Af2vtA3eHXmVTkOxOByORWFRhI+IZRlRWdNHya1G5HP0qu8YzyKlIyMoofpT14xVuSAdahMZBxVoCzHJ5YCg8VMs0cZypyTWbLP5S7TyafYQyyNvfOPepA2kan5FV0apNx9aAJ1bsanRqpo3NTq3erAtJJzUwlqlHIDUwcYoAux3ODk1cjvSB1IrJBFPEg6ZrTmRR99NqQA61Ul1Lnr+tZDXxx61UlvjmuwyNS51Lnr+tULjUDjrWZPe5aqc17QWXZ7wf3qpzXhqlLcnPJ5qvLPxVMC291x1NV2uCe5quZe1MMnNQwLLyjPWpYJQBVAE5qaNiBmmQbNvLxmtC2mweawbW5FXEusdqAOjjveMNVa6SCfOQDnsehrJF8SeSeKmS7jxzmgsxNc8AeFtbtnt9U0uFS3R1QA/nXkut/BPUfD9w9z4L1aWAcvtLkjjtXuFzqSIp82TeR7VlSSm+f5UOByeaCzzH4eaj8TNZ1KTSfFStHpMAOGIxnHvXd3E8RR4LUfJEcDHGamvdQe8f7JZIscMX+swOTiqTmNwbmxGY0+V89zUEEbNnjtTdpIoI7inr3Hc8VYEFxAtzayROw3FG2+5xxX3x/wTs+ITeJfhTqHg7VJgLvwlIQiE/MQ5NfBMscYiYBv3lswLfQ16v+xv8AECT4e/tJ22kXcjf2d4wQqY16blFY1Sj9ZLV/MhzEcv6+lXYYg8YyPMkP6VnaVFJ5bQw8qCWJ/wBnNec/F/4u3Wg2MmjfD9RNrRRkO4YCZHX8K43uM8+/a+/bV8Ffsy6YvhuzH9reL9QUrb20fP2cnozHH6V8T6Z8VPFPja4bXfHuq/bNbvj5kFy3KW6nnbt6Va+J/wACfF3jZJ9f1SNb/X43eWS8mfd1OcDPTFeL6a+o+HLt7DWIsNA214w2c/Q152JbasfoXCdGmpXa1Z9FWl+LtPvknuc9aS8t98Zw5/OuM8MeI7WVACx5FdpbXlrcxjJPNeclqfqkIRaVjlNXgZYj1rhNd3KjA8n3r1jW7JDCcCvN/ENmCrfQ0jGtT0PMNWaRQfn/AAFclqZS5BimVlP8LodrBuxzXVa15RcvE5wM1zEVlfaxfC2tVGWcJz712Uj5rHPlTufbH7BX7RHiDXfO+CPxS1x7i3shnw/cynLd/lLHrX2itrIp3XSZmJIRem0Dofxr8+fhj8Kb7wfLZ3iWii8stkyzh/mBPIFfdngPxkni3SkN6Cmt7Al0nZQBwR9a9KgflOYNc7sWtWgIguFz94DFfG37Q2jjVbPxJAigmGLcRjpgCvtfUbfzVCZ+8Oa+W/HWkf2hqnji3cAiK1c/+O11S2POasj8qwP3cntK6/kajZMpir0lrtjucdrqYf8Aj1U9hC4qDAiMQNVbsMgyB2q8VKNSvEsg+YVAGRZWZuD5kuQQe9akYx+77CnvDs/1fApMgfWrAKKKKAJFqdOlQLU6dKAJAc1IDUINPBxQBLuHrTt1QBvQ07dQB//Z" alt="Tejas Ashwin Patil — Marketing professional"></div>
+      <div class="tag2">🎓 PGDM · Marketing</div>
+      <div class="tag">📍 Pune · from Nashik</div>
+    </div>
+    <div>
+      <p class="eyebrow reveal">About Me</p>
+      <h2 class="title reveal d1">Research-first marketer with a <span class="grad">sales instinct</span></h2>
+      <p class="lead reveal d2">I am a marketing professional with a PGDM in Marketing Management from Dr. D. Y. Patil B-School, Pune (2024–2026), and a B.Sc. in Physics. My experience spans SEO and digital content at Nextgen Intelligence Stats, and real estate sales at Investor Clinic Infratech, where I generated 40+ qualified prospects in one month.</p>
+      <p class="lead reveal d2" style="margin-top:14px">I combine an analytical, data-driven approach with a strong understanding of consumer behaviour to build campaigns that reach the right audience and turn interest into measurable results. I am especially interested in digital marketing, growth strategy and helping businesses scale in India's Tier-2 and Tier-3 markets.</p>
+      <div class="pillars">
+        <div class="pillar reveal d1"><div class="ic">🔍</div><h4>Insight first</h4><p>Every campaign starts with real customer research, not assumptions.</p></div>
+        <div class="pillar reveal d2"><div class="ic">📊</div><h4>Data-backed</h4><p>Measure, A/B test, and double down on what the numbers prove.</p></div>
+        <div class="pillar reveal d3"><div class="ic">💬</div><h4>Story that sells</h4><p>Clear, local, human messaging that converts attention into action.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="eyebrow reveal">Core Skills</p>
+    <h2 class="title reveal d1">The toolkit</h2>
+    <div class="skills-grid">
+      <div class="panel reveal">
+        <h3>Hard Skills</h3>
+        <div class="sk"><div class="sk-top"><span>Market Research & Analysis</span><span>90%</span></div><div class="meter"><i data-w="90"></i></div></div>
+        <div class="sk"><div class="sk-top"><span>SEO & Content Writing</span><span>85%</span></div><div class="meter"><i data-w="85"></i></div></div>
+        <div class="sk"><div class="sk-top"><span>Email Marketing (Mailchimp)</span><span>80%</span></div><div class="meter"><i data-w="80"></i></div></div>
+        <div class="sk"><div class="sk-top"><span>Excel & Power BI</span><span>80%</span></div><div class="meter"><i data-w="80"></i></div></div>
+        <div class="sk"><div class="sk-top"><span>Meta Ads & Social Media</span><span>75%</span></div><div class="meter"><i data-w="75"></i></div></div>
+        <div class="sk"><div class="sk-top"><span>Google Analytics</span><span>70%</span></div><div class="meter"><i data-w="70"></i></div></div>
+      </div>
+      <div class="panel reveal d2">
+        <h3>Soft Skills</h3>
+        <div class="chips">
+          <span>Lead Generation</span><span>Sales Calls</span><span>Client Needs Analysis</span><span>Business Communication</span><span>Presentation</span><span>Team Collaboration</span><span>Problem Solving</span><span>Documentation & Reporting</span><span>Analytical Thinking</span><span>Quick Learner</span>
+        </div>
+        <h3 style="margin-top:30px">Languages</h3>
+        <div class="chips"><span>English</span><span>Hindi</span><span>Marathi</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. EXPERIENCE -->
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow reveal">Experience</p>
+    <h2 class="title reveal d1">Internship experience</h2>
+    <p class="lead reveal d2">Hands-on work in SEO, digital marketing and sales.</p>
+
+    <div class="projects">
+      <article class="proj reveal">
+        <div>
+          <div class="proj-no">Jun 2025 – Aug 2025</div>
+          <h3>SEO Analyst Intern</h3>
+          <p class="ctx">Nextgen Intelligence Stats · 2 months</p>
+          <div class="result">
+            <div><b><span class="count" data-to="6">0</span></b><small>Articles published</small></div>
+            <div><b><span class="count" data-to="6">0</span></b><small>Industries covered</small></div>
+          </div>
+          <div class="tags"><span>SEO</span><span>Keyword Research</span><span>Article Writing</span><span>On-Page SEO</span><span>Digital Marketing</span><span>Lead Generation</span></div>
+        </div>
+        <ul class="xp">
+          <li>Wrote and published SEO-optimised articles on LinkedIn across agriculture, food, finance-tech and cybersecurity industries.</li>
+          <li>Researched keywords and search intent to plan content topics.</li>
+          <li>Applied on-page SEO — titles, meta descriptions, headings and internal links.</li>
+          <li>Created content that supported the company's digital marketing and lead generation.</li>
+          <li>Tracked content and keyword performance using Excel and digital tools.</li>
+        </ul>
+        <div class="pubs">
+          <h5>Published SEO articles</h5>
+          <div class="pub-grid">
+            <a class="art" href="https://www.linkedin.com/pulse/agricultural-sprayers-market-garner-us-782-billion-2035-tejas-patil-eksue/" target="_blank" rel="noopener">
+              <div class="art-img">
+                <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g11" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a0c"/><stop offset="1" stop-color="#244d14"/></linearGradient>
+<pattern id="g11p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g11r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#9be15d" stop-opacity=".45"/><stop offset="1" stop-color="#9be15d" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g11)"/><rect width="640" height="360" fill="url(#g11p)"/><rect width="640" height="360" fill="url(#g11r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M450 90 h70 v40 h-70z M520 105 h50 M570 95 v30" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M480 130 v50" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M465 180 h30" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M470 195 l-25 45 M480 195 v50 M490 195 l25 45" stroke="#9be15d" stroke-width="4" stroke-dasharray="2 10"/>
+<path d="M380 260 c0 -40 10 -70 30 -90 c-30 5 -40 30 -30 60 M420 260 c0 -30 10 -55 30 -70" stroke="#fff" stroke-width="3" opacity=".9"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#9be15d">2035 MARKET OUTLOOK</text>
+<text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Ag Sprayers</text>
+</svg>
+                <span class="art-cat">Agriculture</span>
+              </div>
+              <div class="art-body"><h4>Agricultural Sprayers Market</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+            </a>
+            <a class="art" href="https://www.linkedin.com/pulse/single-cell-protein-market-garner-us-3106-billion-2035-tejas-patil-m2fae/" target="_blank" rel="noopener">
+              <div class="art-img">
+                <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g12" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#081c1a"/><stop offset="1" stop-color="#0f4a42"/></linearGradient>
+<pattern id="g12p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g12r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#2ee6b8" stop-opacity=".45"/><stop offset="1" stop-color="#2ee6b8" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g12)"/><rect width="640" height="360" fill="url(#g12p)"/><rect width="640" height="360" fill="url(#g12r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="510" cy="150" r="80" stroke="#fff" stroke-width="3" opacity=".9"/><circle cx="525" cy="140" r="26" stroke="#2ee6b8" stroke-width="4"/><circle cx="470" cy="185" r="8" stroke="#fff" stroke-width="3" opacity=".9"/><circle cx="555" cy="195" r="6" stroke="#fff" stroke-width="3" opacity=".9"/><circle cx="480" cy="110" r="5" stroke="#fff" stroke-width="3" opacity=".9"/>
+<circle cx="380" cy="110" r="22" stroke="#fff" stroke-width="3" opacity=".9"/><circle cx="395" cy="190" r="14" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M402 110 h28 M409 190 h20" stroke="#fff" stroke-width="3" opacity=".9"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#2ee6b8">2035 MARKET OUTLOOK</text>
+<text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Single Cell Protein</text>
+</svg>
+                <span class="art-cat">Food & Nutrition</span>
+              </div>
+              <div class="art-body"><h4>Single Cell Protein Market</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+            </a>
+            <a class="art" href="https://www.linkedin.com/pulse/soybean-meal-market-displays-substantial-momentum-expects-tejas-patil-fmsoe/" target="_blank" rel="noopener">
+              <div class="art-img">
+                <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g13" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17150a"/><stop offset="1" stop-color="#4a3a0c"/></linearGradient>
+<pattern id="g13p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g13r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#f2cf3a" stop-opacity=".45"/><stop offset="1" stop-color="#f2cf3a" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g13)"/><rect width="640" height="360" fill="url(#g13p)"/><rect width="640" height="360" fill="url(#g13r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M420 230 c-30 -60 0 -150 90 -170 c40 -8 70 10 60 40 c-10 40 -60 40 -80 80 c-15 30 -40 60 -70 50z" stroke="#fff" stroke-width="3" opacity=".9"/>
+<ellipse cx="500" cy="100" rx="20" ry="16" stroke="#f2cf3a" stroke-width="4"/><ellipse cx="470" cy="150" rx="20" ry="16" stroke="#f2cf3a" stroke-width="4"/><ellipse cx="445" cy="200" rx="18" ry="14" stroke="#f2cf3a" stroke-width="4"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#f2cf3a">2035 MARKET OUTLOOK</text>
+<text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Soybean Meal</text>
+</svg>
+                <span class="art-cat">Agri-Commodities</span>
+              </div>
+              <div class="art-body"><h4>Soybean Meal Market</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+            </a>
+            <a class="art" href="https://www.linkedin.com/pulse/wealth-management-software-market-projected-hit-us-3035-tejas-patil-71uoe/" target="_blank" rel="noopener">
+              <div class="art-img">
+                <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g14" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e1230"/><stop offset="1" stop-color="#2b1f6b"/></linearGradient>
+<pattern id="g14p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g14r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#9f8bff" stop-opacity=".45"/><stop offset="1" stop-color="#9f8bff" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g14)"/><rect width="640" height="360" fill="url(#g14p)"/><rect width="640" height="360" fill="url(#g14r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="360" y="60" width="240" height="160" rx="14" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M360 90 h240" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M440 165 m-40 0 a40 40 0 1 0 40 -40 v40z" stroke="#9f8bff" stroke-width="4"/><path d="M445 160 v-40 a40 40 0 0 1 35 22z" fill="#9f8bff" stroke="none" opacity=".8"/>
+<path d="M510 190 v-30 M535 190 v-50 M560 190 v-70" stroke="#fff" stroke-width="10" opacity=".8"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#9f8bff">2035 MARKET OUTLOOK</text>
+<text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Wealth Tech</text>
+</svg>
+                <span class="art-cat">Fintech</span>
+              </div>
+              <div class="art-body"><h4>Wealth Management Software Market</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+            </a>
+            <a class="art" href="https://www.linkedin.com/pulse/clean-label-natural-ingredients-market-surpass-us-2386-tejas-patil-ctkue/" target="_blank" rel="noopener">
+              <div class="art-img">
+                <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g15" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1d16"/><stop offset="1" stop-color="#145238"/></linearGradient>
+<pattern id="g15p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g15r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#5ee6a0" stop-opacity=".45"/><stop offset="1" stop-color="#5ee6a0" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g15)"/><rect width="640" height="360" fill="url(#g15p)"/><rect width="640" height="360" fill="url(#g15r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M420 80 h120 l40 40 v120 h-160z" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M540 80 v40 h40" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M445 200 h90 M445 220 h60" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M500 180 c-40 -10 -50 -60 -20 -90 c30 30 40 70 20 90z M500 180 c0 -30 -5 -55 -20 -75" stroke="#5ee6a0" stroke-width="4"/>
+<path d="M360 120 l15 15 l30 -35" stroke="#5ee6a0" stroke-width="4"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#5ee6a0">2035 MARKET OUTLOOK</text>
+<text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Clean Label</text>
+</svg>
+                <span class="art-cat">Food & Beverage</span>
+              </div>
+              <div class="art-body"><h4>Clean Label Natural Ingredients Market</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+            </a>
+            <a class="art" href="https://www.linkedin.com/pulse/endpoint-security-market-surge-reaching-us-495-billion-tejas-patil-muuge/" target="_blank" rel="noopener">
+              <div class="art-img">
+                <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g16" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1426"/><stop offset="1" stop-color="#123a6e"/></linearGradient>
+<pattern id="g16p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g16r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#5aa9ff" stop-opacity=".45"/><stop offset="1" stop-color="#5aa9ff" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g16)"/><rect width="640" height="360" fill="url(#g16p)"/><rect width="640" height="360" fill="url(#g16r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="360" y="90" width="160" height="110" rx="10" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M340 215 h200" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M550 70 l50 18 v45 c0 40 -25 65 -50 75 c-25 -10 -50 -35 -50 -75 v-45z" fill="#0a1426" stroke="#5aa9ff" stroke-width="4"/><path d="M532 140 l14 14 l26 -30" stroke="#5aa9ff" stroke-width="4"/>
+<circle cx="440" cy="140" r="16" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M440 130 v10 l7 6" stroke="#fff" stroke-width="3" opacity=".9"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#5aa9ff">2035 MARKET OUTLOOK</text>
+<text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Endpoint Security</text>
+</svg>
+                <span class="art-cat">Cybersecurity</span>
+              </div>
+              <div class="art-body"><h4>Endpoint Security Market</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div>
+          <div class="proj-no">Apr 2025 – May 2025</div>
+          <h3>Sales Associate Intern</h3>
+          <p class="ctx">Investor Clinic Infratech Pvt Ltd · Real Estate · 1 month</p>
+          <div class="result">
+            <div><b><span class="count" data-to="40">0</span>+</b><small>Prospects generated</small></div>
+            <div><b><span class="count" data-to="5">0</span></b><small>Developer projects</small></div>
+          </div>
+          <div class="tags"><span>Lead Generation</span><span>Prospecting</span><span>Sales Calls</span><span>Site Visits</span><span>Client Consulting</span></div>
+        </div>
+        <ul class="xp">
+          <li>Generated 40+ prospects in one month through calling and follow-ups.</li>
+          <li>Main project: <b>Dhulera, Gujarat</b> — pitched plots to investors around the smart-city growth story.</li>
+          <li>Also worked on Pune projects: Mantra Developers – Riverside (Baner), Kolte Patil Developers, Kohinoor Developers and VJ Developers.</li>
+          <li>Understood client budgets and needs, recommended suitable properties and arranged site visits.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ARTICLES -->
+<section id="articles" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="eyebrow reveal">Writing</p>
+    <h2 class="title reveal d1">My articles</h2>
+    <p class="lead reveal d2">Independent analysis I publish on LinkedIn — business strategy, fintech, energy, retail and the Indian economy.</p>
+    <div class="filters reveal d2"><button class="flt on" data-f="All">All</button><button class="flt" data-f="Business">Business</button><button class="flt" data-f="Fintech">Fintech</button><button class="flt" data-f="Retail">Retail</button><button class="flt" data-f="Economy">Economy</button><button class="flt" data-f="Energy &amp; EV">Energy &amp; EV</button><button class="flt" data-f="Workplace">Workplace</button></div>
+    <div class="art-grid">
+      <a class="art reveal" data-cat="Retail" href="https://www.linkedin.com/pulse/diwali-2026-online-vs-offline-shopkeeper-where-local-shops-patil-ai96f/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b1020"/><stop offset="1" stop-color="#4a2410"/></linearGradient>
+<pattern id="g1p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g1r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#ffb547" stop-opacity=".45"/><stop offset="1" stop-color="#ffb547" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g1)"/><rect width="640" height="360" fill="url(#g1p)"/><rect width="640" height="360" fill="url(#g1r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M470 180 h120 v110 h-120z M470 180 l20 -40 h80 l20 40" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M500 230 h60" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M380 250 c0 30 70 30 70 0 z" stroke="#ffb547" stroke-width="4"/><path d="M415 235 c-10 -18 0 -35 0 -45 c0 10 12 27 0 45" stroke="#ffb547" stroke-width="4"/>
+<rect x="300" y="160" width="60" height="100" rx="10" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M318 240 h24" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M440 110 l20 -20 M480 100 l0 -26 M520 110 l-20 -20" stroke="#ffb547" stroke-width="4"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#ffb547">RETAIL · FESTIVE SALES</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Diwali 2026</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-1.jpg -->
+          <img src="images/article-1.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Retail</span>
+        </div>
+        <div class="art-body"><h4>Diwali 2026: Online vs Offline Shopkeepers — Where Do Local Shops Stand?</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Business" href="https://www.linkedin.com/pulse/why-swiggy-lost-1197-crore-deep-dive-market-expansion-tejas-patil-kyq0e/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140d0a"/><stop offset="1" stop-color="#4a1d0c"/></linearGradient>
+<pattern id="g2p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g2r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#ff7a3d" stop-opacity=".45"/><stop offset="1" stop-color="#ff7a3d" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g2)"/><rect width="640" height="360" fill="url(#g2p)"/><rect width="640" height="360" fill="url(#g2r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 70 L600 70 M60 130 L600 130 M60 190 L600 190" stroke="#fff" stroke-width="1" opacity=".12"/>
+<path d="M330 80 L390 95 L440 90 L490 140 L540 150 L600 210" stroke="#ff7a3d" stroke-width="4"/><path d="M600 210 l-24 -2 M600 210 l-4 -22" stroke="#ff7a3d" stroke-width="4"/>
+<circle cx="390" cy="95" r="5" fill="#ff7a3d"/><circle cx="490" cy="140" r="5" fill="#ff7a3d"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#ff7a3d">QUICK COMMERCE · LOSS ANALYSIS</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">₹1,197 Cr</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-2.jpg -->
+          <img src="images/article-2.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Business</span>
+        </div>
+        <div class="art-body"><h4>Why Swiggy Lost ₹1,197 Crore: A Deep Dive into Market Expansion</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Fintech" href="https://www.linkedin.com/pulse/mobikwik-enters-stock-broking-new-chapter-indian-fintech-tejas-patil-dgffe/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e1230"/><stop offset="1" stop-color="#2b1f6b"/></linearGradient>
+<pattern id="g3p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g3r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#9f8bff" stop-opacity=".45"/><stop offset="1" stop-color="#9f8bff" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g3)"/><rect width="640" height="360" fill="url(#g3p)"/><rect width="640" height="360" fill="url(#g3r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="490" y="60" width="100" height="190" rx="16" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M525 75 h30" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M330 200 v-60 M370 180 v-80 M410 210 v-50 M450 150 v-70" stroke="#fff" stroke-width="3" opacity=".9"/>
+<rect x="322" y="150" width="16" height="35" fill="#9f8bff" stroke="none"/><rect x="362" y="115" width="16" height="45" fill="#9f8bff" stroke="none"/><rect x="402" y="170" width="16" height="25" fill="#fff" opacity=".7" stroke="none"/><rect x="442" y="95" width="16" height="40" fill="#9f8bff" stroke="none"/>
+<path d="M510 200 l20 -25 l18 12 l25 -35" stroke="#9f8bff" stroke-width="4"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#9f8bff">FINTECH · STOCK BROKING</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">MobiKwik</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-3.jpg -->
+          <img src="images/article-3.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Fintech</span>
+        </div>
+        <div class="art-body"><h4>MobiKwik Enters Stock Broking: A New Chapter in Indian Fintech</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Business" href="https://www.linkedin.com/pulse/vodafone-idea-q4-results-net-loss-narrows-7166-crore-board-patil-aqupe/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a0a12"/><stop offset="1" stop-color="#4d0f26"/></linearGradient>
+<pattern id="g4p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g4r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#ff4d75" stop-opacity=".45"/><stop offset="1" stop-color="#ff4d75" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g4)"/><rect width="640" height="360" fill="url(#g4p)"/><rect width="640" height="360" fill="url(#g4r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M520 260 v-60 M550 260 v-95 M580 260 v-130" stroke="#fff" stroke-width="10" opacity=".85"/>
+<path d="M330 90 L390 130 L440 115 L490 170" stroke="#ff4d75" stroke-width="4"/>
+<path d="M470 75 a45 45 0 0 1 60 0 M482 90 a28 28 0 0 1 36 0" stroke="#fff" stroke-width="3" opacity=".9"/><circle cx="500" cy="105" r="5" fill="#fff"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#ff4d75">TELECOM · Q4 RESULTS</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">₹7,166 Cr</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-4.jpg -->
+          <img src="images/article-4.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Business</span>
+        </div>
+        <div class="art-body"><h4>Vodafone Idea Q4 Results: Net Loss Narrows to ₹7,166 Crore</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Business" href="https://www.linkedin.com/pulse/shift-scale-why-bartronics-abandoning-its-old-model-agri-tech-patil-3ople/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a0c"/><stop offset="1" stop-color="#1f4416"/></linearGradient>
+<pattern id="g5p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g5r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#9be15d" stop-opacity=".45"/><stop offset="1" stop-color="#9be15d" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g5)"/><rect width="640" height="360" fill="url(#g5p)"/><rect width="640" height="360" fill="url(#g5r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M480 260 c0 -80 20 -130 60 -170 M540 90 c-50 10 -70 40 -60 80 c40 -5 60 -40 60 -80z M500 170 c40 0 70 -20 80 -60 c-45 0 -70 20 -80 60z" stroke="#9be15d" stroke-width="4"/>
+<rect x="320" y="120" width="70" height="70" rx="8" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M340 140 h30 v30 h-30z" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M335 120 v-10 M355 120 v-10 M375 120 v-10 M335 200 v-10" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M405 155 h55 m-14 -12 l14 12 l-14 12" stroke="#9be15d" stroke-width="4"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#9be15d">STRATEGY · PIVOT TO AGRI-TECH</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Bartronics</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-5.jpg -->
+          <img src="images/article-5.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Business</span>
+        </div>
+        <div class="art-body"><h4>Shift to Scale: Why Bartronics Is Moving from Its Old Model to Agri-Tech</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Economy" href="https://www.linkedin.com/pulse/when-trade-becomes-weapon-india-crosshairs-us-tariff-politics-patil-agvle/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1426"/><stop offset="1" stop-color="#123a6e"/></linearGradient>
+<pattern id="g6p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g6r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#5aa9ff" stop-opacity=".45"/><stop offset="1" stop-color="#5aa9ff" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g6)"/><rect width="640" height="360" fill="url(#g6p)"/><rect width="640" height="360" fill="url(#g6r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="500" cy="155" r="85" stroke="#fff" stroke-width="3" opacity=".9"/><ellipse cx="500" cy="155" rx="38" ry="85" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M415 155 h170 M430 110 h140 M430 200 h140" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M330 90 c40 -30 90 -30 130 0" stroke="#5aa9ff" stroke-width="4"/><path d="M460 90 l-18 -4 M460 90 l-6 -16" stroke="#5aa9ff" stroke-width="4"/>
+<text x="340" y="150" font-family="Space Grotesk,sans-serif" font-size="54" font-weight="700" fill="#5aa9ff" opacity=".9">%</text></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#5aa9ff">TRADE · US TARIFFS</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">India in Focus</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-6.jpg -->
+          <img src="images/article-6.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Economy</span>
+        </div>
+        <div class="art-body"><h4>When Trade Becomes a Weapon: India in the Crosshairs of US Tariff Politics</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Energy &amp; EV" href="https://www.linkedin.com/pulse/indias-ethanol-transition-policy-momentum-structural-challenge-patil-lnqve/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17150a"/><stop offset="1" stop-color="#4a400c"/></linearGradient>
+<pattern id="g7p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g7r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#f2cf3a" stop-opacity=".45"/><stop offset="1" stop-color="#f2cf3a" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g7)"/><rect width="640" height="360" fill="url(#g7p)"/><rect width="640" height="360" fill="url(#g7r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M520 70 c40 55 60 90 60 120 a60 60 0 0 1 -120 0 c0 -30 20 -65 60 -120z" stroke="#f2cf3a" stroke-width="4"/><path d="M500 205 a25 25 0 0 0 30 20" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M350 270 c5 -70 0 -140 -15 -200 M380 270 c0 -60 10 -120 30 -180 M335 140 c-20 -10 -30 -25 -30 -45 M405 140 c20 -8 30 -25 32 -45" stroke="#fff" stroke-width="3" opacity=".9"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#f2cf3a">POLICY · BIOFUELS</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Ethanol Shift</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-7.jpg -->
+          <img src="images/article-7.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Energy &amp; EV</span>
+        </div>
+        <div class="art-body"><h4>India&#x27;s Ethanol Transition: Policy Momentum vs Structural Challenges</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Energy &amp; EV" href="https://www.linkedin.com/pulse/range-anxiety-persists-despite-ev-charging-growth-deep-tejas-patil-0yqff/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#081c1a"/><stop offset="1" stop-color="#0f4a42"/></linearGradient>
+<pattern id="g8p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g8r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#2ee6b8" stop-opacity=".45"/><stop offset="1" stop-color="#2ee6b8" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g8)"/><rect width="640" height="360" fill="url(#g8p)"/><rect width="640" height="360" fill="url(#g8r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="440" y="110" width="150" height="80" rx="12" stroke="#fff" stroke-width="3" opacity=".9"/><rect x="590" y="135" width="12" height="30" rx="3" fill="#fff" stroke="none"/>
+<rect x="452" y="122" width="38" height="56" rx="5" fill="#2ee6b8" stroke="none"/>
+<path d="M340 120 v45 a25 25 0 0 0 50 0 v-45z M352 120 v-25 M378 120 v-25 M365 190 v40 c0 20 30 20 60 0" stroke="#fff" stroke-width="3" opacity=".9"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#2ee6b8">MOBILITY · EV CHARGING</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Range Anxiety</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-8.jpg -->
+          <img src="images/article-8.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Energy &amp; EV</span>
+        </div>
+        <div class="art-body"><h4>Range Anxiety Persists Despite EV Charging Growth: A Deep Dive</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Energy &amp; EV" href="https://www.linkedin.com/pulse/beyond-redundancy-blueprint-last-mile-power-tejas-patil-vsdxe/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#130c24"/><stop offset="1" stop-color="#3a1a66"/></linearGradient>
+<pattern id="g9p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g9r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#c084ff" stop-opacity=".45"/><stop offset="1" stop-color="#c084ff" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g9)"/><rect width="640" height="360" fill="url(#g9p)"/><rect width="640" height="360" fill="url(#g9r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M520 270 l-35 -190 h70 z M492 120 h56 M502 170 h36 M485 80 l35 -25 l35 25" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M330 110 c50 40 110 40 160 20 M555 120 c25 10 45 25 60 45" stroke="#fff" stroke-width="3" opacity=".9"/>
+<path d="M380 175 l-25 45 h28 l-18 45 l45 -60 h-28 l18 -30z" fill="#c084ff" stroke="none"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#c084ff">ENERGY · INFRASTRUCTURE</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Last-Mile Power</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-9.jpg -->
+          <img src="images/article-9.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Energy &amp; EV</span>
+        </div>
+        <div class="art-body"><h4>Beyond Redundancy: A Blueprint for Last-Mile Power</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+      <a class="art reveal" data-cat="Workplace" href="https://www.linkedin.com/pulse/finding-balance-managing-stress-corporate-life-happier-tejas-patil-c1s4f/" target="_blank" rel="noopener">
+        <div class="art-img">
+          <svg class="cover" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="g10" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#091822"/><stop offset="1" stop-color="#123e55"/></linearGradient>
+<pattern id="g10p" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#fff" opacity=".10"/></pattern>
+<radialGradient id="g10r" cx=".8" cy=".2" r=".7"><stop offset="0" stop-color="#4fd1ff" stop-opacity=".45"/><stop offset="1" stop-color="#4fd1ff" stop-opacity="0"/></radialGradient></defs>
+<rect width="640" height="360" fill="url(#g10)"/><rect width="640" height="360" fill="url(#g10p)"/><rect width="640" height="360" fill="url(#g10r)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M480 260 v-170 M420 260 h120" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M400 110 h160" stroke="#fff" stroke-width="3" opacity=".9"/><circle cx="480" cy="88" r="7" fill="#fff"/>
+<path d="M400 110 l-35 70 h70 z M560 110 l-35 70 h70 z" stroke="#fff" stroke-width="3" opacity=".9"/><path d="M365 180 a35 14 0 0 0 70 0 M525 180 a35 14 0 0 0 70 0" stroke="#4fd1ff" stroke-width="4"/></g>
+<text x="40" y="248" font-family="Inter,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#4fd1ff">WORKPLACE · WELLBEING</text><text x="40" y="300" font-family="Space Grotesk,Inter,sans-serif" font-size="46" font-weight="700" fill="#fff">Work–Life Balance</text>
+</svg>
+          <!-- Article cover: save the LinkedIn cover image as images/article-10.jpg -->
+          <img src="images/article-10.jpg" alt="" loading="lazy" onerror="this.remove()">
+          <span class="art-cat">Workplace</span>
+        </div>
+        <div class="art-body"><h4>Finding Balance: Managing Stress in Corporate Life for a Happier Career</h4><span class="art-link">Read on LinkedIn ↗</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <p class="eyebrow reveal">Education & Credentials</p>
+    <h2 class="title reveal d1">Learning never stops</h2>
+    <div class="edu-grid">
+      <div class="timeline reveal">
+        <div class="tl"><small>2024 – 2026</small><h4>PGDM – Marketing Management</h4><p>Dr. D. Y. Patil B-School, Tathawade, Pune<br>Coursework: Consumer Behavior, Marketing Research, Digital Marketing, Sales Management</p></div>
+        <div class="tl"><small>2020 – 2023</small><h4>B.Sc. – Physics</h4><p>Arts, Commerce & Science College, Ravalgaon · CGPA 7.93/10</p></div>
+        <div class="tl"><small>2019</small><h4>HSC (12th)</h4><p>Dr. A. J. Thakre Jr. College, Talwade</p></div>
+        <div class="tl"><small>2017</small><h4>SSC (10th)</h4><p>L.P.D.P. Maratha English Medium School, Satana · 81.6%</p></div>
+      </div>
+      <div class="certs reveal d2">
+        <div class="cert"><span>🏆 Digital Marketing Certificate — HubSpot (94/100)</span><small>HubSpot</small></div>
+        <div class="cert"><span>📧 Email Marketing Professional</span><small>LinkedIn × Mailchimp</small></div>
+        <div class="cert"><span>🔎 SEO Foundations</span><small>LinkedIn Learning</small></div>
+        <div class="cert"><span>🧠 Market Research: Qualitative</span><small>LinkedIn Learning</small></div>
+        <div class="cert"><span>📨 Email & Newsletter Marketing</span><small>LinkedIn Learning</small></div>
+        <div class="cert"><span>📈 SEBI Investor Certification (48/50)</span><small>NISM</small></div>
+        <div class="cert"><span>📊 Power BI Workshop</span><small>OfficeMaster</small></div>
+        <div class="cert"><span>🤖 Prompt Engineering · AI for Beginners</span><small>SSO · HP LIFE</small></div>
+        <div class="cert"><span>🤝 CRM · Leadership · Presenting Data</span><small>HP LIFE</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 class="title">Let's grow something <span class="grad">together</span></h2>
+      <p class="lead">Hiring for a marketing, research or growth role — or need help marketing your business? I'd love to talk.</p>
+      <div class="cta" style="justify-content:center">
+        <a href="mailto:tapatil2000@gmail.com" class="btn btn-p">✉ Email Me</a>
+        <a href="Tejas_Patil_Resume.pdf" download class="btn btn-g">⬇ Download Resume</a>
+      </div>
+      <div class="cinfo">
+        <a href="mailto:tapatil2000@gmail.com">tapatil2000@gmail.com</a>
+        <a href="tel:+919021349530">+91 90213 49530</a>
+        <!-- EDIT: paste your LinkedIn URL -->
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Tejas Ashwin Patil · Built with research, data & a little creativity.</footer>
+
+<script>
+// Typing effect
+const words=["market research","SEO & content","digital campaigns","lead generation","growth strategy"];
+let wi=0,ci=0,del=false;const el=document.getElementById("typed");
+function type(){
+  const w=words[wi];
+  el.textContent=del?w.slice(0,--ci):w.slice(0,++ci);
+  let t=del?45:95;
+  if(!del&&ci===w.length){t=1600;del=true}
+  else if(del&&ci===0){del=false;wi=(wi+1)%words.length;t=350}
+  setTimeout(type,t);
+}
+type();
+
+// Counters
+function count(n){
+  const to=+n.dataset.to;let s=null;
+  const step=ts=>{if(!s)s=ts;const p=Math.min((ts-s)/1500,1);n.textContent=Math.floor(p*to);if(p<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+}
+
+// Scroll reveal + triggered animations
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    e.target.classList.add("in");
+    e.target.querySelectorAll(".count").forEach(count);
+    e.target.querySelectorAll(".meter i").forEach(i=>i.style.width=i.dataset.w+"%");
+    io.unobserve(e.target);
+  });
+},{threshold:.15});
+document.querySelectorAll(".reveal").forEach(r=>io.observe(r));
+
+// Dashboard bars + funnel
+setTimeout(()=>{
+  document.querySelectorAll("#bars i").forEach((b,i)=>setTimeout(()=>b.style.height=b.dataset.h+"%",i*120));
+  document.querySelectorAll("#funnel div").forEach((f,i)=>setTimeout(()=>f.style.width=f.dataset.w+"%",400+i*200));
+},500);
+
+// Nav state + progress bar
+const nav=document.getElementById("nav"),bar=document.getElementById("progress");
+addEventListener("scroll",()=>{
+  nav.classList.toggle("scrolled",scrollY>30);
+  const h=document.documentElement.scrollHeight-innerHeight;
+  bar.style.width=(h>0?scrollY/h*100:0)+"%";
+},{passive:true});
+
+// Mobile menu
+const links=document.getElementById("links");
+document.getElementById("burger").onclick=()=>links.classList.toggle("open");
+links.querySelectorAll("a").forEach(a=>a.onclick=()=>links.classList.remove("open"));
+
+// Spotlight on project cards
+document.querySelectorAll(".proj").forEach(c=>c.addEventListener("mousemove",e=>{
+  const r=c.getBoundingClientRect();
+  c.style.setProperty("--x",(e.clientX-r.left)+"px");
+  c.style.setProperty("--y",(e.clientY-r.top)+"px");
+}));
+
+// Article filters
+document.querySelectorAll(".flt").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".flt").forEach(x=>x.classList.toggle("on",x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll(".art").forEach(a=>{
+    const show=f==="All"||a.dataset.cat===f;
+    a.classList.toggle("hide",!show);
+    if(show){a.classList.add("in");a.animate([{opacity:0,transform:"translateY(20px)"},{opacity:1,transform:"none"}],{duration:400,easing:"ease-out"})}
+  });
+});
+
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
